@@ -3,9 +3,12 @@
     text-align: center;
 }
 
+.main {
+    display: inline-block;
+}
+
 
 .header {
-    display: inline-block;
     background-color: dimgray;
     width: 1000px;
     height: 150px;
@@ -21,8 +24,6 @@
 
 
 .movie-suggestion {
-    display: inline-block;
-    vertical-align: middle;
     background-color: burlywood;
     width: 1000px;
     height: 400px;
@@ -40,89 +41,78 @@
 
 
 .movie-info {
-    display: inline-block;
     background-color: chocolate;
     width: 1000px;
     height: 1275px;
 }
 
 .main-info {
+    float: left;
     margin: 1% 1% 1% 1%;
-    display: inline-block;
     background-color: darkgray;
-    width: 65%;
+    width: 67%;
     height: 98%;
 }
 
-.adveres{
+.adveres {
     margin: 1%;
-    position: relative;
-    /*align-items: center; !*세로 가운데 정렬*!*/
-    /*justify-content: center; !*가로 가운데 정렬*!*/
     background-color: darkblue;
     width: 98%;
     height: 10%;
 }
 
 .advertisement {
-    /*margin: 1%;*/
-    /*background-color: darkolivegreen;*/
-    /*width: 45%;*/
-    /*height: 95%;*/
+    display: inline-block;
+    background-color: wheat;
+    margin: 1%;
+    width: 45%;
+    height: 90%;
 }
 
 .recent {
-    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
     margin: 1%;
     background-color: chartreuse;
     width: 98%;
-    height: 42%;
+    overflow: auto;
 }
 
 .discount {
-    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
     margin: 1%;
     background-color: chartreuse;
     width: 98%;
-    height: 42%;
+    overflow: auto;
 }
 
 
 .side-info {
-    margin: 1% 4% 1% 1%;
-    display: inline-block;
+    float: right;
+    margin: 1% 1% 1% 1%;
     background-color: cornsilk;
-    width: 25%;
+    width: 29%;
     height: 98%;
 }
 
 .top10 {
-    position: relative;
     background-color: darkolivegreen;
+    padding-top: 5%;
+    padding-bottom: 5%;
     margin: 1%;
     width: 98%;
-    height: 80%;
 }
 
-.adver2{
-    position: relative;
+.adver2 {
     background-color: chartreuse;
     margin: 1%;
     width: 95%;
     height: 10%;
 }
 
-.movie-card{
-    position: relative;
-    background-color: chartreuse;
-    margin: 2%;
-    width: 96%;
-    height: 10%;
-}
-
 
 .app-service {
-    display: inline-block;
     background-color: khaki;
     width: 1000px;
     height: 215px;
@@ -138,7 +128,6 @@
 
 
 .footer {
-    display: inline-block;
     background-color: darkolivegreen;
     width: 1000px;
     height: 310px;
