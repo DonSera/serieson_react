@@ -1,0 +1,19 @@
+.movie-card{
+    float: left;
+    position: relative;
+    background-color: wheat;
+
+    padding: 1% 1% 5% 1%;
+    margin : 1%;
+
+    width: 15%;
+}
+
+.img{
+    width: 90%;
+    height: 40%;
+}
+
+.font-size{
+    font-size: 0.8em;
+}
