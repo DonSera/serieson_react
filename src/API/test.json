@@ -1,0 +1,124 @@
+{
+  "movie": [
+    {
+      "img": "https://tvstore-phinf.pstatic.net/20210820_71/1629422353958lRDF0_JPEG/The_Suicide_Squad_STD_V_DD_KA_TT_2160x2880_300dpi_KR.jpg?type=f148_202",
+      "mainTitle": "더 수어사이드 스쿼드",
+      "subTitle": false,
+      "type": "HD",
+      "grad": 7.1,
+      "price": 12000,
+      "youth": false,
+      "priceType": "구매",
+      "rank" : 1,
+      "event" : "Event"
+    },
+    {
+      "img": "https://tvstore-phinf.pstatic.net/20210826_36/1629943964659nTdae_JPEG/2__0714.jpg?type=f148_202",
+      "mainTitle": "이스케이프룸",
+      "subTitle": false,
+      "type": "HD",
+      "grad": 8.1,
+      "price": 9000,
+      "youth": true,
+      "priceType": "구매",
+      "rank" : 2,
+      "event" : "Event"
+    },
+    {
+      "img": "https://movie-phinf.pstatic.net/20210726_114/1627265960693kkM0B_JPEG/movie_image.jpg?type=f148_202",
+      "mainTitle": "싱크홀",
+      "subTitle": false,
+      "type": "HD",
+      "grad": 6.4,
+      "price": 12000,
+      "youth": true,
+      "priceType": "구매",
+      "rank" : 3,
+      "event" : null
+    },
+    {
+      "img": "https://tvstore-phinf.pstatic.net/20210723_257/1627004729177LxFjr_JPEG/LUCA_MediaPoster_MAIN-A.jpg?type=f148_202",
+      "mainTitle": "루카",
+      "subTitle": true,
+      "type": "HD",
+      "grad": 7.1,
+      "price": 9600,
+      "youth": true,
+      "priceType": "대여",
+      "rank" : 4,
+      "event" : "Event"
+    },
+    {
+      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202",
+      "mainTitle": "크루엘라 (패키지: 자막판+더빙판+부가영상)",
+      "subTitle": false,
+      "type": "HD",
+      "grad": 9.5,
+      "price": 9600,
+      "youth": true,
+      "priceType": "구매",
+      "rank" : 5,
+      "event" : "HOT"
+    },
+    {
+      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202",
+      "mainTitle": "크루엘라 (패키지: 자막판+더빙판+부가영상)",
+      "subTitle": false,
+      "type": "HD",
+      "grad": 9.5,
+      "price": 9600,
+      "youth": true,
+      "priceType": "구매",
+      "rank" : 6,
+      "event" : "HOT"
+    },
+    {
+      "img": "https://tvstore-phinf.pstatic.net/20210723_257/1627004729177LxFjr_JPEG/LUCA_MediaPoster_MAIN-A.jpg?type=f148_202",
+      "mainTitle": "루카",
+      "subTitle": true,
+      "type": "HD",
+      "grad": 7.1,
+      "price": 9600,
+      "youth": true,
+      "priceType": "대여",
+      "rank" : 7,
+      "event" : "Event"
+    },
+    {
+      "img": "https://movie-phinf.pstatic.net/20210726_114/1627265960693kkM0B_JPEG/movie_image.jpg?type=f148_202",
+      "mainTitle": "싱크홀",
+      "subTitle": false,
+      "type": "HD",
+      "grad": 6.4,
+      "price": 12000,
+      "youth": true,
+      "priceType": "구매",
+      "rank" : 8,
+      "event" : null
+    },
+    {
+      "img": "https://tvstore-phinf.pstatic.net/20210826_36/1629943964659nTdae_JPEG/2__0714.jpg?type=f148_202",
+      "mainTitle": "이스케이프룸",
+      "subTitle": false,
+      "type": "HD",
+      "grad": 8.1,
+      "price": 9000,
+      "youth": true,
+      "priceType": "구매",
+      "rank" : 9,
+      "event" : "Event"
+    },
+    {
+      "img": "https://tvstore-phinf.pstatic.net/20210820_71/1629422353958lRDF0_JPEG/The_Suicide_Squad_STD_V_DD_KA_TT_2160x2880_300dpi_KR.jpg?type=f148_202",
+      "mainTitle": "더 수어사이드 스쿼드",
+      "subTitle": false,
+      "type": "HD",
+      "grad": 7.1,
+      "price": 12000,
+      "youth": false,
+      "priceType": "구매",
+      "rank" : 10,
+      "event" : "Event"
+    }
+  ]
+}
