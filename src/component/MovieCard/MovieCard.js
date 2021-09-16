@@ -6,7 +6,7 @@ function MovieCard({obj}) {
     return (
         <section className={`${styles[`movie-card`]} ${styles[`font-size`]}`}>
             <div className={styles[`wrap`]}>
-                <CircleIcon text={"Event"} width={'50px'} height={'50px'}/>
+                <CircleIcon text={"Event"} diameter={'40px'} fontSize={'10px'}/>
                 <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
                 <div className={styles[`info`]}>
                     <span className={styles[`type`]}>{obj.type}</span>

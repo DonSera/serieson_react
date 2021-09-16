@@ -5,7 +5,7 @@ function MovieCardSlider({obj}) {
     // obj : 이미지, 이름 , 별점, 가격, +a
     return (
         <section className={`${styles[`movie-card`]} ${styles[`font-size`]}`}>
-            <CircleIcon text={"Event"} width={'50px'} height={'50px'}/>
+            <CircleIcon text={"Event"} diameter={'50px'} fontSize={'15px'}/>
             <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
             <div className={styles[`info`]}>
                 <span className={styles[`type`]}>{obj.type}</span>
