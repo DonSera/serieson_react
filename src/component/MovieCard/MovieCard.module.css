@@ -1,12 +1,17 @@
 .movie-card{
-    float: left;
+    display: inline-block;
     position: relative;
     background-color: wheat;
 
-    padding: 1% 1% 5% 1%;
     margin : 1%;
+    width: 17%;
+    padding-top: 35%;
+}
 
-    width: 15%;
+.wrap{
+    position: absolute;
+    top : 1%;
+    left: 0;
 }
 
 .img{

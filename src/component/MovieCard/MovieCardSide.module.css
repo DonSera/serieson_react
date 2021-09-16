@@ -1,3 +1,7 @@
+.font-size{
+    font-size: 0.8em;
+}
+
 .movie-card{
     position: relative;
     display: flex;
@@ -11,19 +15,11 @@
 }
 
 .img{
-    box-sizing: border-box;
     width: 20%;
     height: 90%;
 }
 
-.font-size{
-    font-size: 0.8em;
-}
-
 .info{
-    box-sizing: border-box;
-    padding-top: 10%;
-    width: 70%;
-    height: 100%;
+    width: 75%;
     background-color: cornsilk;
 }

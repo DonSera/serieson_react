@@ -1,0 +1,16 @@
+.movie-card{
+    background-color: wheat;
+    display: inline-block;
+    margin-top: 5%;
+    padding-top: 5%;
+}
+
+.img{
+    margin : auto;
+    width: 90%;
+    height: 40%;
+}
+
+.font-size{
+    font-size: 0.8em;
+}
