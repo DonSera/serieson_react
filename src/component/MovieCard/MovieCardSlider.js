@@ -1,13 +1,13 @@
 import styles from './MovieCardSlider.module.css'
 import CircleIcon from "../Icon";
-import Quality from "../Type/Quality";
-import SubYouth from "../Type/SubYouth";
+import Quality from "../Icon/Quality";
+import SubYouth from "../Icon/SubYouth";
 
 function MovieCardSlider({obj}) {
     // obj : 이미지, 이름 , 별점, 가격, +a
     return (
         <section className={`${styles[`movie-card`]} ${styles[`font-size`]}`}>
-            <CircleIcon text={"Event"} diameter={'50px'} fontSize={'15px'}/>
+            {obj['event'] ? <CircleIcon text={obj.event} diameter={'50px'} fontSize={'15px'}/> : <></>}
             <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
             <div className={styles[`info`]}>
                 <Quality text={obj.type}/>

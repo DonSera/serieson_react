@@ -20,6 +20,8 @@
 }
 
 .info{
+    padding-left: 2%;
+    text-align: left;
     width: 75%;
     background-color: cornsilk;
 }

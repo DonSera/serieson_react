@@ -1,6 +1,7 @@
-:root{
-    --center-width : 1000px
+:root {
+    --center-width: 1000px
 }
+
 .App {
     background-color: cadetblue;
     text-align: center;
@@ -14,16 +15,19 @@
 /*상단*/
 .header {
     background-color: dimgray;
+    display: block;
     width: var(--center-width);
     height: 150px;
 }
 
 .app-logo {
-
+    height: 30%;
+    background-color: chartreuse;
 }
 
 .app-search {
-
+    height: 50%;
+    background-color: burlywood;
 }
 
 /*영화 추천*/
@@ -36,68 +40,52 @@
 
 .suggestion {
     display: inline-block;
-    background-color: chartreuse;
-    width: 80%;
+    width: 90%;
     height: 90%;
 }
 
-.slider-css{
+.slider-css {
     height: 100%;
 }
 
 
 /*메인화면 (정보, 할인, 상위10, 광과)*/
 .movie-info {
-    background-color: chocolate;
+    background-color: ivory;
     width: var(--center-width);
     height: 1275px;
 }
+
 /*왼쪽*/
 .main-info {
     float: left;
     margin: 1% 1% 1% 1%;
-    background-color: darkgray;
+    /*background-color: darkred;*/
     width: 67%;
     height: 98%;
 }
 
 .adveres {
-    margin: 1%;
     background-color: darkblue;
-    width: 98%;
+    width: 100%;
     height: 10%;
 }
 
-.recent {
-    padding: 1%;
-    margin: 1%;
-    background-color: chartreuse;
-    width: 96%;
-    overflow: auto;
-}
-
-.discount {
-    padding: 1%;
-    margin: 1%;
-    background-color: chartreuse;
-    width: 96%;
-    overflow: auto;
-}
 /*오른쪽*/
 .side-info {
     float: right;
-    margin: 1% 1% 1% 1%;
+    margin-right: 1%;
+    padding-top: 1%;
     background-color: cornsilk;
     width: 29%;
-    height: 98%;
+    height: 97%;
 }
 
 .top10 {
     background-color: darkolivegreen;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 5% 1% 5% 1%;
     margin: 1%;
-    width: 98%;
+    width: 96%;
 }
 
 .adver2 {
@@ -116,11 +104,17 @@
 }
 
 .event {
-
+    display: inline-block;
+    background-color: darkgray;
+    width: 40%;
+    height: 100%;
 }
 
 .service {
-
+    display: inline-block;
+    background-color: burlywood;
+    width: 58%;
+    height: 100%;
 }
 
 
@@ -129,4 +123,8 @@
     background-color: darkolivegreen;
     width: var(--center-width);
     height: 310px;
+}
+
+.footer-info {
+    margin: auto;
 }
