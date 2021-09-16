@@ -22,3 +22,7 @@
 .font-size{
     font-size: 0.8em;
 }
+
+.info{
+    display: block;
+}

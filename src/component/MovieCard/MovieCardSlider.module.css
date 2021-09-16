@@ -15,3 +15,13 @@
 .font-size{
     font-size: 0.8em;
 }
+
+.info{
+    margin: auto;
+    width: 80%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*한줄로 표시*/
+}

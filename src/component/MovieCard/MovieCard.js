@@ -1,4 +1,6 @@
 import styles from './MovieCard.module.css'
+import Quality from "../Type/Quality";
+import SubYouth from "../Type/SubYouth";
 import CircleIcon from "../Icon";
 
 function MovieCard({obj}) {
@@ -9,9 +11,9 @@ function MovieCard({obj}) {
                 <CircleIcon text={"Event"} diameter={'40px'} fontSize={'10px'}/>
                 <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
                 <div className={styles[`info`]}>
-                    <span className={styles[`type`]}>{obj.type}</span>
-                    {obj["subTitle"] ? <span>자막</span> : <></>}
-                    {obj["youth"] ? <></> : <span>청불</span>}
+                    <Quality text={obj.type}/>
+                    {obj["subTitle"] ? <SubYouth sub={obj.subTitle}/> : <></>}
+                    {obj["youth"] ? <></> : <SubYouth youth={obj.youth}/>}
                     <span>{obj["mainTitle"]}</span>
                 </div>
                 <div className={styles[`grad`]}>

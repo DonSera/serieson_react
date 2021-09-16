@@ -1,5 +1,7 @@
 import styles from './MovieCardSlider.module.css'
 import CircleIcon from "../Icon";
+import Quality from "../Type/Quality";
+import SubYouth from "../Type/SubYouth";
 
 function MovieCardSlider({obj}) {
     // obj : 이미지, 이름 , 별점, 가격, +a
@@ -8,10 +10,10 @@ function MovieCardSlider({obj}) {
             <CircleIcon text={"Event"} diameter={'50px'} fontSize={'15px'}/>
             <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
             <div className={styles[`info`]}>
-                <span className={styles[`type`]}>{obj.type}</span>
-                {obj["subTitle"] ? <span>자막</span> : <></>}
-                {obj["youth"] ? <></> : <span>청불</span>}
-                <span>{obj["mainTitle"]}</span>
+                <Quality text={obj.type}/>
+                {obj["subTitle"] ? <SubYouth sub={obj.subTitle}/> : <></>}
+                {obj["youth"] ? <></> : <SubYouth youth={obj.youth}/>}
+                <span className={styles['main-title']}>{obj["mainTitle"]}</span>
             </div>
             <div className={styles[`grad`]}>
                 <span>별 개수 </span>
