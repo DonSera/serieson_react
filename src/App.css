@@ -1,16 +1,20 @@
+:root{
+    --center-width : 1000px
+}
 .App {
     background-color: cadetblue;
     text-align: center;
 }
 
 .main {
+    /*전체 가운데 정렬*/
     display: inline-block;
 }
 
-
+/*상단*/
 .header {
     background-color: dimgray;
-    width: 1000px;
+    width: var(--center-width);
     height: 150px;
 }
 
@@ -22,30 +26,33 @@
 
 }
 
-
+/*영화 추천*/
 .movie-suggestion {
+    position: relative;
     background-color: burlywood;
-    width: 1000px;
+    width: var(--center-width);
     height: 400px;
 }
 
 .suggestion {
-    position: relative;
-    display: flex;
-    align-items: center; /*세로 가운데 정렬*/
-    justify-content: center; /*가로 가운데 정렬*/
+    display: inline-block;
     background-color: chartreuse;
-    width: 100%;
+    width: 80%;
     height: 90%;
 }
 
-
-.movie-info {
-    background-color: chocolate;
-    width: 1000px;
-    height: 1275px;
+.slider-css{
+    height: 100%;
 }
 
+
+/*메인화면 (정보, 할인, 상위10, 광과)*/
+.movie-info {
+    background-color: chocolate;
+    width: var(--center-width);
+    height: 1275px;
+}
+/*왼쪽*/
 .main-info {
     float: left;
     margin: 1% 1% 1% 1%;
@@ -61,33 +68,22 @@
     height: 10%;
 }
 
-.advertisement {
-    display: inline-block;
-    background-color: wheat;
-    margin: 1%;
-    width: 45%;
-    height: 90%;
-}
-
 .recent {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 1%;
     margin: 1%;
     background-color: chartreuse;
-    width: 98%;
+    width: 96%;
     overflow: auto;
 }
 
 .discount {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 1%;
     margin: 1%;
     background-color: chartreuse;
-    width: 98%;
+    width: 96%;
     overflow: auto;
 }
-
-
+/*오른쪽*/
 .side-info {
     float: right;
     margin: 1% 1% 1% 1%;
@@ -112,9 +108,10 @@
 }
 
 
+/*이벤트*/
 .app-service {
     background-color: khaki;
-    width: 1000px;
+    width: var(--center-width);
     height: 215px;
 }
 
@@ -127,8 +124,9 @@
 }
 
 
+/*아래*/
 .footer {
     background-color: darkolivegreen;
-    width: 1000px;
+    width: var(--center-width);
     height: 310px;
 }
