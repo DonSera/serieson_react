@@ -1,0 +1,15 @@
+.youth{
+    background-color: darkred;
+    padding: 2%;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.5em;
+}
+
+.sub{
+    background-color: chocolate;
+    padding: 0.5%;
+    border-radius: 10%;
+    color: white;
+    font-weight: bold;
+}
