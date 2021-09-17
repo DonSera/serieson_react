@@ -8,16 +8,36 @@ margin, padding
 
 :root {
     --center-width: 1000px;
-    --wrap-padding : 10px;
+    --wrap-padding: 10px;
 }
 
 .App {
     text-align: center; /*아래 가운데 정렬*/
-    background-color: cadetblue;
+    background-color: #f5f5f5;
 }
 
 .main {
     display: inline-block; /*아래 가운데 정렬 실행*/
+}
+
+.margin {
+    width: 100%;
+    height: var(--wrap-padding);
+}
+
+#top {
+    width: 100vw;
+    height: 540px;
+    position: absolute;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    z-index: 0;
+}
+
+#divider{
+    position: absolute;
+    border-bottom: 1px solid lightgrey;
+    z-index: 2;
 }
 
 /*상단*/
@@ -27,28 +47,48 @@ margin, padding
     padding: var(--wrap-padding);
 
     display: block;
-    background-color: dimgray;
+    position: relative;
+    z-index: 1;
 }
 
-.app-logo {
-    height: 30%;
-    background-color: chartreuse;
+.header-ul {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    display: flex;
+    list-style: none;
 }
 
-.app-search {
-    height: 50%;
-    background-color: burlywood;
+#logo {
+    font-size: 2em;
+    justify-content: space-between;
+}
+
+#category {
+    font-size: 1.5em;
+    padding: 5px 0 5px 0;
+}
+
+#list {
+    font-size: 1.2em;
+    padding: 3px 0 3px 0;
+}
+
+.main > .header > ul > li {
+    margin: 0 10px;
+}
+
+.main > .header > ul > .divide-li {
+    margin-left: auto;
 }
 
 
 /*영화 추천*/
 .movie-suggestion {
     width: var(--center-width);
-    height: 400px;
+    height: 350px;
     padding: var(--wrap-padding);
 
     position: relative;
-    background-color: burlywood;
 }
 
 .suggestion {
@@ -57,19 +97,24 @@ margin, padding
 
     display: inline-block;
 }
-
-.slider-css {
-    height: 100%;
+.slick-prev {
+    left: -60px !important;
+}
+.slick-prev:before {
+    color: darkgrey !important;
+    font-size: 50px !important;
 }
 
+.slick-next:before {
+    color: darkgrey !important;
+    font-size: 50px !important;
+}
 
 /*메인화면 (정보, 할인, 상위10, 광과)*/
 .movie-info {
     width: var(--center-width);
     height: 1275px;
     padding: var(--wrap-padding);
-
-    background-color: dimgray;
 }
 
 /*왼쪽*/
@@ -84,11 +129,8 @@ margin, padding
     width: 100%;
     height: 10%;
 }
-.margin{
-    width: 100%;
-    height: var(--wrap-padding);
-}
-.windows{
+
+.windows {
     width: 100%;
     height: 90%;
 }
@@ -101,13 +143,12 @@ margin, padding
     float: right;
 }
 
+
 /*이벤트*/
 .app-service {
     width: var(--center-width);
     height: 215px;
     padding: var(--wrap-padding);
-
-    background-color: khaki;
 }
 
 
@@ -116,8 +157,6 @@ margin, padding
     width: var(--center-width);
     height: 310px;
     padding: var(--wrap-padding);
-
-    background-color: darkolivegreen;
 }
 
 .footer-info {

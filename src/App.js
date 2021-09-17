@@ -36,7 +36,6 @@ function App() {
     ]
 
     const settings = {
-        className: 'slider-css',
         dots: true,
         speed: 500,
         infinite: true,
@@ -47,11 +46,37 @@ function App() {
 
     return (
         <div className="App">
+            <section id={'top'}/>
+            <div id={'divider'} style={{width: '100vw', top: '55px'}}/>
+            <div id={'divider'} style={{width: '100vw', top: '105px'}}/>
+            <div id={'divider'} style={{width: '100vw', top: '145px'}}/>
             <div className={`main`}>
-
                 <section className={`header`}>
-                    <div className={`app-logo`}/>
-                    <div className={`app-search`}/>
+                    <ul id={'logo'} className={`header-ul`}>
+                        <li>Naver</li>
+                        <li>SERIES_on</li>
+                        <li>로그인</li>
+                        <li>메뉴</li>
+                    </ul>
+                    <div className={`margin`}/>
+                    <ul id={'category'} className={`header-ul`}>
+                        <li>영화</li>
+                        <li>방송</li>
+                        <li>장르.소설 만화</li>
+                        <li className={`divide-li`}>My</li>
+                        <li>장바구니</li>
+                        <li>검색</li>
+                    </ul>
+                    <div className={`margin`}/>
+                    <ul id={'list'} className={`header-ul`}>
+                        <li>영화홈</li>
+                        <li>카테고리</li>
+                        <li>인기순위 Top100</li>
+                        <li>이벤트</li>
+                        <li>무료</li>
+                        <li>천원관</li>
+                        <li>구매혜택</li>
+                    </ul>
                 </section>
 
                 <section className={`movie-suggestion`}>
@@ -110,7 +135,7 @@ function App() {
                                          if (index > 9) return '';
                                          else return <MovieCardSide key={`side_${obj.name}_${index}`}
                                                                     obj={obj}
-                                                                    rank={index+1}/>;
+                                                                    rank={index + 1}/>;
                                      })}/>
                         <div className={`margin`}/>
                         <Advertise width={'100%'} height={'8%'}/>
@@ -118,10 +143,10 @@ function App() {
                 </section>
 
                 <section className={`app-service`}>
-                    <SmallWindow width={'32%'}
+                    <SmallWindow width={'35%'}
                                  height={'100%'}
                                  header={'10%'}/>
-                    <SmallWindow width={'66%'}
+                    <SmallWindow width={'65%'}
                                  height={'100%'}
                                  header={'10%'}/>
                 </section>
@@ -131,10 +156,10 @@ function App() {
                         {footerInfo.map(text => <div>{text}</div>)}
                     </div>
                 </section>
-
             </div>
         </div>
-    );
+    )
+        ;
 }
 
 export default App;
