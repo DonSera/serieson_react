@@ -5,6 +5,8 @@ import MovieCardSide from "./component/MovieCard/MovieCardSide";
 import Advertise from "./component/Advertise/Advertise";
 import SmallWindow from "./component/Window/SmallWindow";
 import fetch from "./function/fetch";
+import sortRank from "./function/sortRank";
+import select from "./function/select";
 import {useEffect, useState} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -12,11 +14,18 @@ import "slick-carousel/slick/slick-theme.css";
 
 function App() {
     const [info, setInfo] = useState([]);
+    const [sort, setSort] = useState([])
+    const [selectEvent, setSelectEvent] = useState([])
+
     useEffect(() => {
         fetch().then(arr => {
                 setInfo(arr);
+                setSort(sortRank(arr, 10));
+                setSelectEvent(select(arr, 'event', 10));
             }
         )
+
+
     }, [])
 
     const footerInfo = [
@@ -50,7 +59,8 @@ function App() {
                         <Slider {...settings}>
                             {info.map((obj, index) => {
                                 return (
-                                    <MovieCardSlider key={`suggestion_${obj.name}_${index}`} obj={obj}/>
+                                    <MovieCardSlider key={`suggestion_${obj.name}_${index}`}
+                                                     obj={obj}/>
                                 );
                             })}
                         </Slider>
@@ -61,8 +71,12 @@ function App() {
                 <section className={`movie-info`}>
                     <section className={`left-info`}>
                         <div className={`advers`}>
-                            <Advertise width={'48%'} height={'100%'} float={'left'}/>
-                            <Advertise width={'48%'} height={'100%'} float={'right'}/>
+                            <Advertise width={'48%'}
+                                       height={'100%'}
+                                       float={'left'}/>
+                            <Advertise width={'48%'}
+                                       height={'100%'}
+                                       float={'right'}/>
                         </div>
                         <div className={`windows`}>
                             <div className={`margin`}/>
@@ -71,28 +85,32 @@ function App() {
                                          header={`5%`}
                                          contents={info.map((obj, index) => {
                                              if (index > 9) return '';
-                                             else return <MovieCard key={`recent_${obj.name}_${index}`} obj={obj}/>;
+                                             else return <MovieCard key={`recent_${obj.name}_${index}`}
+                                                                    obj={obj}/>;
                                          })}/>
                             <div className={`margin`}/>
                             <SmallWindow width={`100%`}
                                          height={`49%`}
                                          header={`5%`}
-                                         contents={info.map((obj, index) => {
-                                             if (index > 9) return '';
-                                             else return <MovieCard key={`discount_${obj.name}_${index}`} obj={obj}/>;
-                                         })}/>
+                                         contents={selectEvent.map((obj, index) =>
+                                             <MovieCard key={`discount_${obj.name}_${index}`}
+                                                        obj={obj}/>
+                                         )}/>
                         </div>
                     </section>
 
                     <section className={`right-info`}>
-                        <Advertise width={'100%'} height={'20%'}/>
+                        <Advertise width={'100%'}
+                                   height={'20%'}/>
                         <div className={`margin`}/>
                         <SmallWindow width={'100%'}
                                      height={'65%'}
                                      header={'3%'}
-                                     contents={info.map((obj, index) => {
+                                     contents={sort.map((obj, index) => {
                                          if (index > 9) return '';
-                                         else return <MovieCardSide key={`side_${obj.name}_${index}`} obj={obj}/>;
+                                         else return <MovieCardSide key={`side_${obj.name}_${index}`}
+                                                                    obj={obj}
+                                                                    rank={index+1}/>;
                                      })}/>
                         <div className={`margin`}/>
                         <Advertise width={'100%'} height={'8%'}/>
@@ -100,8 +118,12 @@ function App() {
                 </section>
 
                 <section className={`app-service`}>
-                    <SmallWindow width={'32%'} height={'100%'} header={'10%'}/>
-                    <SmallWindow width={'66%'} height={'100%'} header={'10%'}/>
+                    <SmallWindow width={'32%'}
+                                 height={'100%'}
+                                 header={'10%'}/>
+                    <SmallWindow width={'66%'}
+                                 height={'100%'}
+                                 header={'10%'}/>
                 </section>
 
                 <section className={`footer`}>

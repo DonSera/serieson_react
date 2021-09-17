@@ -1,19 +1,24 @@
 import styles from './MovieCard.module.css'
 import Quality from "../Icon/Quality";
-import SubYouth from "../Icon/SubYouth";
+import SubTitle from "../Icon/SubTitle";
 import CircleIcon from "../Icon";
+import Youth from "../Icon/Youth";
 
 function MovieCard({obj}) {
     // obj : 이미지, 이름 , 별점, 가격, +a
     return (
         <section className={`${styles[`movie-card`]} ${styles[`font-size`]}`}>
             <div className={styles[`wrap`]}>
-                {obj['event'] ? <CircleIcon text={obj.event} diameter={'50px'} fontSize={'15px'}/> : <></>}
+                {obj['hot']
+                    ? <CircleIcon text={'HOT'} diameter={'50px'} fontSize={'15px'}/>
+                    : obj['event']
+                        ? <CircleIcon text={'Event'} diameter={'50px'} fontSize={'15px'}/>
+                        : <></>}
                 <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
                 <div className={styles[`info`]}>
                     <Quality text={obj.type}/>
-                    {obj["subTitle"] ? <SubYouth sub={obj["subTitle"]}/> : <></>}
-                    {obj["youth"] ? <></> : <SubYouth youth={obj.youth}/>}
+                    {obj["subTitle"] ? <SubTitle/> : <></>}
+                    {obj["youth"] ? <></> : <Youth/>}
                     <span>{obj["mainTitle"]}</span>
                 </div>
                 <div className={styles[`grad`]}>
