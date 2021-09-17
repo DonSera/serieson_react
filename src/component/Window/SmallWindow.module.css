@@ -2,7 +2,7 @@
     display: inline-block;
     box-sizing: border-box;
     overflow: hidden;
-    border: 2px solid darkgrey;
+    border: 1px solid darkgrey;
     border-radius: 5px;
 }
 

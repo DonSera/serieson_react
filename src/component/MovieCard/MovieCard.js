@@ -10,9 +10,9 @@ function MovieCard({obj}) {
         <section className={`${styles[`movie-card`]} ${styles[`font-size`]}`}>
             <div className={styles[`wrap`]}>
                 {obj['hot']
-                    ? <CircleIcon text={'HOT'} diameter={'50px'} fontSize={'15px'}/>
+                    ? <CircleIcon text={'HOT'} diameter={'40px'} fontSize={'10px'}/>
                     : obj['event']
-                        ? <CircleIcon text={'Event'} diameter={'50px'} fontSize={'15px'}/>
+                        ? <CircleIcon text={'Event'} diameter={'40px'} fontSize={'10px'}/>
                         : <></>}
                 <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
                 <div className={styles[`info`]}>
