@@ -3,25 +3,28 @@
 }
 
 .movie-card{
-    position: relative;
-    display: flex;
-    background-color: wheat;
-
-    margin : 1% auto 1% auto;
+    width: 96%;
+    height: 8%;
+    margin: 1%;
     padding: 1%;
 
-    width: 90%;
-    height: 8%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid darkgrey;
 }
 
 .img{
-    width: 20%;
-    height: 90%;
+    margin: 0 5% 0 5%;
+    width: 15%;
+    height: 85%;
+    align-items: center;
 }
 
 .info{
-    padding-left: 2%;
+    width: 95%;
+
     text-align: left;
-    width: 75%;
-    background-color: cornsilk;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

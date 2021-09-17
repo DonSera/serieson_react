@@ -85,11 +85,11 @@ function App() {
                     </section>
 
                     <section className={`right-info`}>
-                        <Advertise width={'100%'} height={'25%'}/>
+                        <Advertise width={'100%'} height={'20%'}/>
                         <div className={`margin`}/>
                         <SmallWindow width={'100%'}
                                      height={'65%'}
-                                     header={'5%'}
+                                     header={'3%'}
                                      contents={info.map((obj, index) => {
                                          if (index > 9) return '';
                                          else return <MovieCardSide key={`side_${obj.name}_${index}`} obj={obj}/>;

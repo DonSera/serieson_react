@@ -96,9 +96,9 @@ margin, padding
 /*오른쪽*/
 .right-info {
     width: 30%;
+    height: 100%;
 
     float: right;
-    background-color: cornsilk;
 }
 
 /*이벤트*/
