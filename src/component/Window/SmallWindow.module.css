@@ -1,19 +1,19 @@
 .window-background{
-    margin-top: 2%;
-    margin-bottom: 1%;
+    display: inline-block;
+    box-sizing: border-box;
     overflow: hidden;
     border: 2px solid darkgrey;
-
-    border-radius: 1%;
+    border-radius: 5px;
 }
 
 .window-header{
     background-color: lightsteelblue;
-    overflow: auto;
 }
 
 .window-main{
-    height: fit-content;
+    height: 100%;
+    overflow: auto;
+
+    padding: 1% 0 1% 0 ;
     background-color: white;
-    /*overflow: auto;*/
 }

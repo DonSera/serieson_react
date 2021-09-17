@@ -1,23 +1,33 @@
+/*순서는
+가로, 세로
+margin, padding
+위치(postion, display, float)
+배경 색상
+나머지 요소들
+*/
+
 :root {
-    --center-width: 1000px
+    --center-width: 1000px;
+    --wrap-padding : 10px;
 }
 
 .App {
+    text-align: center; /*아래 가운데 정렬*/
     background-color: cadetblue;
-    text-align: center;
 }
 
 .main {
-    /*전체 가운데 정렬*/
-    display: inline-block;
+    display: inline-block; /*아래 가운데 정렬 실행*/
 }
 
 /*상단*/
 .header {
-    background-color: dimgray;
-    display: block;
     width: var(--center-width);
     height: 150px;
+    padding: var(--wrap-padding);
+
+    display: block;
+    background-color: dimgray;
 }
 
 .app-logo {
@@ -30,18 +40,22 @@
     background-color: burlywood;
 }
 
+
 /*영화 추천*/
 .movie-suggestion {
-    position: relative;
-    background-color: burlywood;
     width: var(--center-width);
     height: 400px;
+    padding: var(--wrap-padding);
+
+    position: relative;
+    background-color: burlywood;
 }
 
 .suggestion {
-    display: inline-block;
     width: 90%;
     height: 90%;
+
+    display: inline-block;
 }
 
 .slider-css {
@@ -51,78 +65,59 @@
 
 /*메인화면 (정보, 할인, 상위10, 광과)*/
 .movie-info {
-    background-color: ivory;
     width: var(--center-width);
     height: 1275px;
+    padding: var(--wrap-padding);
+
+    background-color: dimgray;
 }
 
 /*왼쪽*/
-.main-info {
+.left-info {
+    width: 69%;
+    height: 100%;
+
     float: left;
-    margin: 1% 1% 1% 1%;
-    /*background-color: darkred;*/
-    width: 67%;
-    height: 98%;
 }
 
-.adveres {
-    background-color: darkblue;
+.advers {
     width: 100%;
     height: 10%;
 }
+.margin{
+    width: 100%;
+    height: var(--wrap-padding);
+}
+.windows{
+    width: 100%;
+    height: 90%;
+}
 
 /*오른쪽*/
-.side-info {
+.right-info {
+    width: 30%;
+
     float: right;
-    margin-right: 1%;
-    padding-top: 1%;
     background-color: cornsilk;
-    width: 29%;
-    height: 97%;
 }
-
-.top10 {
-    background-color: darkolivegreen;
-    padding: 5% 1% 5% 1%;
-    margin: 1%;
-    width: 96%;
-}
-
-.adver2 {
-    background-color: chartreuse;
-    margin: 1%;
-    width: 95%;
-    height: 10%;
-}
-
 
 /*이벤트*/
 .app-service {
-    background-color: khaki;
     width: var(--center-width);
     height: 215px;
-}
+    padding: var(--wrap-padding);
 
-.event {
-    display: inline-block;
-    background-color: darkgray;
-    width: 40%;
-    height: 100%;
-}
-
-.service {
-    display: inline-block;
-    background-color: burlywood;
-    width: 58%;
-    height: 100%;
+    background-color: khaki;
 }
 
 
 /*아래*/
 .footer {
-    background-color: darkolivegreen;
     width: var(--center-width);
     height: 310px;
+    padding: var(--wrap-padding);
+
+    background-color: darkolivegreen;
 }
 
 .footer-info {
