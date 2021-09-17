@@ -1,9 +1,8 @@
 function sortRank(array, sliceNum = 0) {
-    console.dir(array);
     const copy = array;
-    console.log(Array.isArray(copy));
 
     copy.sort(function (a, b) {
+        // 반대로 sort 하기 (큰게 위로 오게)
         if (a['sold'] > b['sold']) {
             return -1;
         }
