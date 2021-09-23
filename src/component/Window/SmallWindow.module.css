@@ -1,7 +1,8 @@
 .window-background{
+    /*position: relative;*/
     display: inline-block;
     box-sizing: border-box;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .window-header{
@@ -9,7 +10,16 @@
     border-left: 1px solid darkgrey;
     border-right: 1px solid darkgrey;
     border-radius: 5px 5px 0 0;
-    background-color: lightsteelblue;
+    background-color: #eeeeee;
+
+    /*양 옆 배치를 위하여 */
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+
+    /*수직 정렬*/
+    display: flex;
+    align-items: center;
 }
 
 .window-main{
@@ -17,8 +27,17 @@
     border-left: 1px solid darkgrey;
     border-right: 1px solid darkgrey;
     border-radius: 0 0 5px 5px;
-    height: fit-content;
 
     padding: 1% 0 1% 0 ;
+    box-sizing: border-box;
     background-color: white;
+}
+
+.header-text{
+    position: absolute;
+    left:  5px;
+}
+.header-link{
+    position: absolute;
+    right: 5px;
 }
