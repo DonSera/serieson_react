@@ -8,8 +8,8 @@ function SmallWindow({width, height = 0, header, contents}) {
         </div>;
     } else {
         return <div className={styles['window-background']} style={{width: width}}>
-            <div className={styles['window-header']} style={{width: width, height: header}}>Header</div>
-            <div className={styles['window-main']} style={{width: width}}>{contents}</div>
+            <div className={styles['window-header']} style={{height: header}}>Header</div>
+            <div className={styles['window-main']}>{contents}</div>
         </div>;
     }
 }
