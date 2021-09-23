@@ -49,7 +49,7 @@ function App() {
         <div className="App">
             <section id={'topBackground'}/>
             <section className={`header`}>
-                <Header/>
+                <Header info={info}/>
             </section>
 
 
@@ -82,18 +82,22 @@ function App() {
                         </div>
                         <div className={`windows`}>
                             <div className={`margin`}/>
-                            <SmallWindow width={`100%`}
+                            <SmallWindow windowWidth={`100%`}
                                          height={`49%`}
-                                         header={`5%`}
+                                         headerHeight={`30px`}
+                                         headerText={'최신영화'}
+                                         url={"https://serieson.naver.com/movie/recentList.nhn"}
                                          contents={info.map((obj, index) => {
                                              if (index > 9) return '';
                                              else return <MovieCard key={`recent_${obj.name}_${index}`}
                                                                     obj={obj}/>;
                                          })}/>
                             <div className={`margin`}/>
-                            <SmallWindow width={`100%`}
+                            <SmallWindow windowWidth={`100%`}
                                          height={`49%`}
-                                         header={`5%`}
+                                         headerHeight={`30px`}
+                                         headerText={'할인 영화'}
+                                         url={"https://serieson.naver.com/movie/categoryList.nhn?categoryCode=300003"}
                                          contents={selectEvent.map((obj, index) =>
                                              <MovieCard key={`discount_${obj.name}_${index}`}
                                                         obj={obj}/>
@@ -105,8 +109,10 @@ function App() {
                         <Advertise width={'100%'}
                                    height={'20%'}/>
                         <div className={`margin`}/>
-                        <SmallWindow width={'100%'}
-                                     header={'3%'}
+                        <SmallWindow windowWidth={'100%'}
+                                     headerHeight={'30px'}
+                                     headerText={'영화 스토어 TOP10'}
+                                     url={"https://serieson.naver.com/movie/top100List.nhn"}
                                      contents={sort.map((obj, index) => {
                                          if (index > 9) return '';
                                          else return <MovieCardSide key={`side_${obj.name}_${index}`}
@@ -119,10 +125,12 @@ function App() {
                 </section>
 
                 <section className={`app-service`}>
-                    <SmallWindow width={'35%'}
-                                 header={'10%'}/>
-                    <SmallWindow width={'65%'}
-                                 header={'10%'}/>
+                    <SmallWindow windowWidth={'35%'}
+                                 headerHeight={'20px'}
+                    headerText={'이벤트'}/>
+                    <SmallWindow windowWidth={'65%'}
+                                 headerHeight={'20px'}
+                    headerText={'서비스 이용 안내'}/>
                 </section>
 
                 <section className={`footer`}>
