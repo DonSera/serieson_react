@@ -4,6 +4,7 @@ import MovieCardSlider from "./component/MovieCard/MovieCardSlider";
 import MovieCardSide from "./component/MovieCard/MovieCardSide";
 import Advertise from "./component/Advertise/Advertise";
 import SmallWindow from "./component/Window/SmallWindow";
+import Header from "./component/Header/Header";
 import fetch from "./function/fetch";
 import sortRank from "./function/sortRank";
 import select from "./function/select";
@@ -46,39 +47,13 @@ function App() {
 
     return (
         <div className="App">
-            <section id={'top'}/>
-            <div id={'divider'} style={{width: '100vw', top: '55px'}}/>
-            <div id={'divider'} style={{width: '100vw', top: '105px'}}/>
-            <div id={'divider'} style={{width: '100vw', top: '145px'}}/>
-            <div className={`main`}>
-                <section className={`header`}>
-                    <ul id={'logo'} className={`header-ul`}>
-                        <li>Naver</li>
-                        <li>SERIES_on</li>
-                        <li>로그인</li>
-                        <li>메뉴</li>
-                    </ul>
-                    <div className={`margin`}/>
-                    <ul id={'category'} className={`header-ul`}>
-                        <li>영화</li>
-                        <li>방송</li>
-                        <li>장르.소설 만화</li>
-                        <li className={`divide-li`}>My</li>
-                        <li>장바구니</li>
-                        <li>검색</li>
-                    </ul>
-                    <div className={`margin`}/>
-                    <ul id={'list'} className={`header-ul`}>
-                        <li>영화홈</li>
-                        <li>카테고리</li>
-                        <li>인기순위 Top100</li>
-                        <li>이벤트</li>
-                        <li>무료</li>
-                        <li>천원관</li>
-                        <li>구매혜택</li>
-                    </ul>
-                </section>
+            <section id={'topBackground'}/>
+            <section className={`header`}>
+                <Header/>
+            </section>
 
+
+            <div className={`main`}>
                 <section className={`movie-suggestion`}>
                     <div className={`suggestion`}>
                         <Slider {...settings}>
@@ -157,8 +132,7 @@ function App() {
                 </section>
             </div>
         </div>
-    )
-        ;
+    );
 }
 
 export default App;

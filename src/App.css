@@ -25,7 +25,7 @@ margin, padding
     height: var(--wrap-padding);
 }
 
-#top {
+#topBackground {
     width: 100vw;
     height: 540px;
     position: absolute;
@@ -34,52 +34,15 @@ margin, padding
     z-index: 0;
 }
 
-#divider{
-    position: absolute;
-    border-bottom: 1px solid lightgrey;
-    z-index: 2;
-}
-
 /*상단*/
 .header {
-    width: var(--center-width);
     height: 150px;
     padding: var(--wrap-padding);
 
     display: block;
     position: relative;
-    z-index: 1;
 }
 
-.header-ul {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-    display: flex;
-    list-style: none;
-}
-
-#logo {
-    font-size: 2em;
-    justify-content: space-between;
-}
-
-#category {
-    font-size: 1.5em;
-    padding: 5px 0 5px 0;
-}
-
-#list {
-    font-size: 1.2em;
-    padding: 3px 0 3px 0;
-}
-
-.main > .header > ul > li {
-    margin: 0 10px;
-}
-
-.main > .header > ul > .divide-li {
-    margin-left: auto;
-}
 
 
 /*영화 추천*/

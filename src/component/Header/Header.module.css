@@ -1,0 +1,64 @@
+:root {
+    --center-width: 1040px;
+}
+
+#headerWarp {
+    width: 100%;
+    text-align: center; /*아래 가운데 정렬*/
+}
+
+.divider {
+    border: 1px solid darkgrey;
+}
+
+ul {
+    /*점 없애기*/
+    list-style: none;
+    margin: 10px
+}
+
+ul > span {
+    float: right;
+}
+
+ul > span > span {
+    padding: 0 20px 0 20px;
+}
+
+li {
+    float: left;
+}
+
+#logo {
+    display: inline-flex;
+    margin: 4px 0 4px 0;
+    width: var(--center-width);
+
+    font-weight: bold;
+    font-size: 2em;
+    justify-content: space-between;
+
+}
+
+#category {
+    margin : 8px 0 8px 0;
+    display: inline-block;
+    width: var(--center-width);
+}
+
+#category li {
+    padding: 0 5px 0 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+#detail {
+    margin : 5px 0 5px 0;
+    display: inline-block;
+    width: var(--center-width);
+}
+
+#detail li {
+    padding: 0 10px 0 10px;
+}
