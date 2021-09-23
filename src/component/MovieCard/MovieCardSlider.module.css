@@ -1,7 +1,6 @@
 .movie-card {
     position: relative;
     display: inline-block;
-    background-color: wheat;
 
     margin-top: 5%;
     padding-top: 5%;
@@ -16,6 +15,10 @@
 
 .font-size {
     font-size: 0.8em;
+}
+
+span{
+    padding: 0 0 0 5px;
 }
 
 a{
@@ -41,5 +44,10 @@ a:hover{
 .main-title {
     font: caption;
     font-size: 1.2em;
+    font-weight: bold;
+}
+
+#price{
+    color: limegreen;
     font-weight: bold;
 }

@@ -36,7 +36,9 @@ function MovieCardSlider({obj}) {
             </div>
             <div className={styles[`price`]}>
                 <span>{obj["priceType"]}</span>
-                <span>{obj["price"]}</span>
+                <span id={styles['price']}>{obj["price"] >= 1000
+                    ? `${Math.floor(obj["price"] / 1000)},${obj["price"] % 1000}`
+                    : obj["price"]}</span>
             </div>
         </section>
     )

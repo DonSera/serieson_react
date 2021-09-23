@@ -29,18 +29,20 @@ function MovieCard({obj}) {
 
                 <div className={styles[`grad`]}>
                     <StarRatings
-                        rating={obj["grad"]/2}
+                        rating={obj["grad"] / 2}
                         starEmptyColor={'grey'}
                         starRatedColor={'red'}
                         numberOfStars={5}
                         starDimension="12px"
                         starSpacing="1px"
                     />
-                    <span>{obj["grad"]%1 ? obj["grad"] : `${obj["grad"]}.0`}</span>
+                    <span>{obj["grad"] % 1 ? obj["grad"] : `${obj["grad"]}.0`}</span>
                 </div>
                 <div className={styles[`price`]}>
                     <span>{obj["priceType"]}</span>
-                    <span>{obj["price"]}</span>
+                    <span id={styles['price']}>{obj["price"] >= 1000
+                        ? `${Math.floor(obj["price"] / 1000)},${obj["price"] % 1000}`
+                        : obj["price"]}</span>
                 </div>
             </div>
         </section>
