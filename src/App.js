@@ -44,6 +44,22 @@ function App() {
         slidesToScroll: 5,
     };
 
+    const event = [
+        '이벤트 첫번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
+        '이벤트 두번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
+        '이벤트 세번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
+        '이벤트 네번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
+        '이벤트 다섯번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용'
+    ]
+
+    function RenderTest() {
+        function eventMap() {
+            return event.map(text => <li>{text}</li>);
+        }
+
+        return <div className={'event-wrap'}> {eventMap()} </div>;
+    }
+
 
     return (
         <div className="App">
@@ -127,10 +143,13 @@ function App() {
                 <section className={`app-service`}>
                     <SmallWindow windowWidth={'35%'}
                                  headerHeight={'20px'}
-                    headerText={'이벤트'}/>
+                                 headerText={'이벤트'}
+                                 contents={<RenderTest/>}
+                    />
                     <SmallWindow windowWidth={'65%'}
+                                 windowHeight={'90%'}
                                  headerHeight={'20px'}
-                    headerText={'서비스 이용 안내'}/>
+                                 headerText={'서비스 이용 안내'}/>
                 </section>
 
                 <section className={`footer`}>
