@@ -24,7 +24,16 @@
     font-size: 0.8em;
 }
 
-.info{
+a{
+    text-decoration-line: none;
+    color: black;
+}
+a:hover{
+    text-decoration-line: underline;
+    color: darkblue;
+}
+
+.title{
     padding: 10% 0 0 0;
     overflow: hidden;
     display: -webkit-box;

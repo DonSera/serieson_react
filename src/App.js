@@ -98,6 +98,8 @@ function App() {
                         <div className={`advers`}>
                             <Advertise width={'48%'}
                                        height={'100%'}
+                                       urlImg={"https://nstore-phinf.pstatic.net/20210914_293/nstore_adm_1631619930201MrJSw_JPEG/4onPC_344X129.jpg"}
+                                       urlLink={"https://serieson.naver.com/event/details.nhn?eventNo=13564"}
                                        float={'left'}/>
                             <Advertise width={'48%'}
                                        height={'100%'}

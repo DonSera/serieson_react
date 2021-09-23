@@ -12,6 +12,15 @@
     align-items: center;
     border-top: 1px solid darkgrey;
 }
+a{
+    text-decoration-line: none;
+    color: black;
+
+}
+a:hover{
+    text-decoration-line: underline;
+    color: darkblue;
+}
 
 .img{
     margin: 0 5% 0 5%;
