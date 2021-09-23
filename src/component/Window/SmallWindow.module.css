@@ -2,17 +2,22 @@
     display: inline-block;
     box-sizing: border-box;
     overflow: hidden;
-    border: 1px solid darkgrey;
-    border-radius: 5px;
 }
 
 .window-header{
+    border-top: 1px solid darkgrey;
+    border-left: 1px solid darkgrey;
+    border-right: 1px solid darkgrey;
+    border-radius: 5px 5px 0 0;
     background-color: lightsteelblue;
 }
 
 .window-main{
-    height: 100%;
-    overflow: auto;
+    border-bottom: 1px solid darkgrey;
+    border-left: 1px solid darkgrey;
+    border-right: 1px solid darkgrey;
+    border-radius: 0 0 5px 5px;
+    height: fit-content;
 
     padding: 1% 0 1% 0 ;
     background-color: white;
