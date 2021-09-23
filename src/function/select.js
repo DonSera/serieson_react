@@ -1,8 +1,8 @@
 import sortRank from "./sortRank";
 
 function select(array, str, slice = 0) {
-    const sort = sortRank(array);
     const select = [];
+    const sort = sortRank(array, "sales");
 
     sort.forEach(obj => {
         if (obj[str]) {

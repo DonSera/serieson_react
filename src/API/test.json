@@ -1,199 +1,536 @@
 {
   "movie": [
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210820_71/1629422353958lRDF0_JPEG/The_Suicide_Squad_STD_V_DD_KA_TT_2160x2880_300dpi_KR.jpg?type=f148_202",
-      "mainTitle": "더 수어사이드 스쿼드",
+      "mainTitle": "올드",
       "subTitle": false,
+      "info": {
+        "open": "2021.08.18.",
+        "actors": [
+        ],
+        "country": "미국",
+        "time": 108,
+        "genre": "공포/스릴러",
+        "age": 12,
+        "director": "M.나이트 샤말란"
+      },
+      "grad": 6.7,
       "type": "HD",
-      "grad": 7.1,
-      "price": 12000,
-      "youth": false,
       "priceType": "구매",
-      "sold": 10000,
-      "event" : true,
-      "hot" : false
+      "price": 14900,
+      "sales": 10000,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=457660",
+      "img": "https://movie-phinf.pstatic.net/20210728_151/1627456000405n3Uga_JPEG/movie_image.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210826_36/1629943964659nTdae_JPEG/2__0714.jpg?type=f148_202",
-      "mainTitle": "이스케이프룸",
+      "mainTitle": "이스케이프 룸 2: 노 웨이 아웃",
       "subTitle": false,
+      "info": {
+        "open": "2021.07.14.",
+        "actors": [
+          "테일러 러셀",
+          "로건 밀러"
+        ],
+        "country": "미국",
+        "time": 88,
+        "genre": "액션",
+        "age": 15,
+        "director": "애덤 로비텔"
+      },
+      "grad": 8.0,
       "type": "HD",
-      "grad": 8.1,
-      "price": 9000,
-      "youth": true,
       "priceType": "구매",
-      "sold": 9000,
-      "event" : true,
-      "hot" : false
+      "price": 8900,
+      "sales": 9000,
+      "event": false,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=460866",
+      "img": "https://tvstore-phinf.pstatic.net/20210826_36/1629943964659nTdae_JPEG/2__0714.jpg?type=f148_202"
     },
     {
-      "img": "https://movie-phinf.pstatic.net/20210726_114/1627265960693kkM0B_JPEG/movie_image.jpg?type=f148_202",
       "mainTitle": "싱크홀",
       "subTitle": false,
+      "info": {
+        "open": "2021.08.11.",
+        "actors": [
+          "차승원",
+          "김성균",
+          "이광수",
+          "김해준"
+        ],
+        "country": "대한민국",
+        "time": 114,
+        "genre": "드라마",
+        "age": 12,
+        "director": "김지훈"
+      },
+      "grad": 6.6,
       "type": "HD",
-      "grad": 6.4,
-      "price": 12000,
-      "youth": true,
       "priceType": "구매",
-      "sold": 8000,
-      "event" : false,
-      "hot" : false
+      "price": 14900,
+      "sales": 8000,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=461067",
+      "img": "https://movie-phinf.pstatic.net/20210726_114/1627265960693kkM0B_JPEG/movie_image.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210723_257/1627004729177LxFjr_JPEG/LUCA_MediaPoster_MAIN-A.jpg?type=f148_202",
-      "mainTitle": "루카",
-      "subTitle": true,
+      "mainTitle": "레미니센스",
+      "subTitle": false,
+      "info": {
+        "open": "2021.08.25.",
+        "actors": [
+          "레베카 퍼거슨",
+          "탠디 뉴튼",
+          "휴 잭맨"
+        ],
+        "country": "미국",
+        "time": 111,
+        "genre": "공포/스릴러",
+        "age": 12,
+        "director": "리사 조이"
+      },
+      "grad": 7.0,
       "type": "HD",
-      "grad": 7.1,
-      "price": 9600,
-      "youth": true,
-      "priceType": "대여",
-      "sold": 7000,
-      "event" : true,
-      "hot" : false
+      "priceType": "구매",
+      "price": 16400,
+      "sales": 7000,
+      "event": false,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=454587",
+      "img": "https://tvstore-phinf.pstatic.net/20210914_165/16315950048003l0Xx_JPEG/REMINISCENCE_PVOD_STD_V_DD_KA_TT_2160x2880_300dpi_KR.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202",
+      "mainTitle": "블랙 위도우(패키지: 자막판+더빙판+부가영상)",
+      "subTitle": false,
+      "info": {
+        "open": "2021.07.07.",
+        "actors": [
+          "스칼릿 조핸슨",
+          "데이빗 하버",
+          "플로렌스 퓨",
+          "레이첼 와이즈"
+        ],
+        "country": "미국",
+        "time": 133,
+        "genre": "액션",
+        "age": 12,
+        "director": "케이트 쇼트랜드"
+      },
+      "grad": 8.5,
+      "type": "HD",
+      "priceType": "구매",
+      "price": 10900,
+      "sales": 6000,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=454587",
+      "img": "https://tvstore-phinf.pstatic.net/20210803_284/1627979114724m2U3a_JPEG/MARVEL_BlackWidow_MediaPoster_A.jpg?type=f148_202"
+    },
+    {
       "mainTitle": "크루엘라 (패키지: 자막판+더빙판+부가영상)",
       "subTitle": false,
+      "info": {
+        "open": "2021.05.26.",
+        "actors": [
+          "엠마 스톤"
+        ],
+        "country": "미국",
+        "time": 134,
+        "genre": "드라마",
+        "age": 12,
+        "director": "크레이그 질레스피"
+      },
+      "grad": 9.2,
       "type": "HD",
-      "grad": 9.5,
-      "price": 9600,
-      "youth": true,
       "priceType": "구매",
-      "sold": 6000,
-      "event" : true,
-      "hot" : true
+      "price": 10900,
+      "sales": 5000,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=445793",
+      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202",
-      "mainTitle": "크루엘라 (패키지: 자막판+더빙판+부가영상)",
-      "subTitle": false,
-      "type": "HD",
-      "grad": 9.5,
-      "price": 9600,
-      "youth": true,
-      "priceType": "구매",
-      "sold": 5000,
-      "event" : false,
-      "hot" : false
-    },
-    {
-      "img": "https://tvstore-phinf.pstatic.net/20210723_257/1627004729177LxFjr_JPEG/LUCA_MediaPoster_MAIN-A.jpg?type=f148_202",
       "mainTitle": "루카",
       "subTitle": true,
+      "info": {
+        "open": "2021.06.17.",
+        "actors": [
+          "제이콥 트렘블레이",
+          "잭 딜런 그레이저",
+          "엠마 버만"
+        ],
+        "country": "미국",
+        "time": 95,
+        "genre": "액션",
+        "age": 0,
+        "director": "엔리코 카사로사"
+      },
+      "grad": 9.0,
       "type": "HD",
-      "grad": 7.1,
-      "price": 9600,
-      "youth": true,
       "priceType": "대여",
-      "sold": 4000,
-      "event" : true,
-      "hot" : false
+      "price": 5500,
+      "sales": 4000,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=452652",
+      "img": "https://tvstore-phinf.pstatic.net/20210723_257/1627004729177LxFjr_JPEG/LUCA_MediaPoster_MAIN-A.jpg?type=f148_202"
+    },{
+      "mainTitle": "올드",
+      "subTitle": false,
+      "info": {
+        "open": "2021.08.18.",
+        "actors": [
+        ],
+        "country": "미국",
+        "time": 108,
+        "genre": "공포/스릴러",
+        "age": 12,
+        "director": "M.나이트 샤말란"
+      },
+      "grad": 6.7,
+      "type": "HD",
+      "priceType": "구매",
+      "price": 14900,
+      "sales": 3100,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=457660",
+      "img": "https://movie-phinf.pstatic.net/20210728_151/1627456000405n3Uga_JPEG/movie_image.jpg?type=f148_202"
     },
     {
-      "img": "https://movie-phinf.pstatic.net/20210726_114/1627265960693kkM0B_JPEG/movie_image.jpg?type=f148_202",
+      "mainTitle": "이스케이프 룸 2: 노 웨이 아웃",
+      "subTitle": false,
+      "info": {
+        "open": "2021.07.14.",
+        "actors": [
+          "테일러 러셀",
+          "로건 밀러"
+        ],
+        "country": "미국",
+        "time": 88,
+        "genre": "액션",
+        "age": 15,
+        "director": "애덤 로비텔"
+      },
+      "grad": 8.0,
+      "type": "HD",
+      "priceType": "구매",
+      "price": 8900,
+      "sales": 3200,
+      "event": false,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=460866",
+      "img": "https://tvstore-phinf.pstatic.net/20210826_36/1629943964659nTdae_JPEG/2__0714.jpg?type=f148_202"
+    },
+    {
       "mainTitle": "싱크홀",
       "subTitle": false,
+      "info": {
+        "open": "2021.08.11.",
+        "actors": [
+          "차승원",
+          "김성균",
+          "이광수",
+          "김해준"
+        ],
+        "country": "대한민국",
+        "time": 114,
+        "genre": "드라마",
+        "age": 12,
+        "director": "김지훈"
+      },
+      "grad": 6.6,
       "type": "HD",
-      "grad": 6.4,
-      "price": 12000,
-      "youth": true,
       "priceType": "구매",
-      "sold": 3000,
-      "event" : true,
-      "hot" : false
+      "price": 14900,
+      "sales": 3300,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=461067",
+      "img": "https://movie-phinf.pstatic.net/20210726_114/1627265960693kkM0B_JPEG/movie_image.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210826_36/1629943964659nTdae_JPEG/2__0714.jpg?type=f148_202",
-      "mainTitle": "이스케이프룸",
+      "mainTitle": "레미니센스",
       "subTitle": false,
+      "info": {
+        "open": "2021.08.25.",
+        "actors": [
+          "레베카 퍼거슨",
+          "탠디 뉴튼",
+          "휴 잭맨"
+        ],
+        "country": "미국",
+        "time": 111,
+        "genre": "공포/스릴러",
+        "age": 12,
+        "director": "리사 조이"
+      },
+      "grad": 7.0,
       "type": "HD",
-      "grad": 8.1,
-      "price": 9000,
-      "youth": true,
       "priceType": "구매",
-      "sold": 2000,
-      "event" : true,
-      "hot" : false
+      "price": 16400,
+      "sales": 3400,
+      "event": false,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=454587",
+      "img": "https://tvstore-phinf.pstatic.net/20210914_165/16315950048003l0Xx_JPEG/REMINISCENCE_PVOD_STD_V_DD_KA_TT_2160x2880_300dpi_KR.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210820_71/1629422353958lRDF0_JPEG/The_Suicide_Squad_STD_V_DD_KA_TT_2160x2880_300dpi_KR.jpg?type=f148_202",
-      "mainTitle": "더 수어사이드 스쿼드",
+      "mainTitle": "블랙 위도우(패키지: 자막판+더빙판+부가영상)",
       "subTitle": false,
+      "info": {
+        "open": "2021.07.07.",
+        "actors": [
+          "스칼릿 조핸슨",
+          "데이빗 하버",
+          "플로렌스 퓨",
+          "레이첼 와이즈"
+        ],
+        "country": "미국",
+        "time": 133,
+        "genre": "액션",
+        "age": 12,
+        "director": "케이트 쇼트랜드"
+      },
+      "grad": 8.5,
       "type": "HD",
-      "grad": 7.1,
-      "price": 12000,
-      "youth": false,
       "priceType": "구매",
-      "sold": 1000,
-      "event" : true,
-      "hot" : false
+      "price": 10900,
+      "sales": 3500,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=454587",
+      "img": "https://tvstore-phinf.pstatic.net/20210803_284/1627979114724m2U3a_JPEG/MARVEL_BlackWidow_MediaPoster_A.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202",
       "mainTitle": "크루엘라 (패키지: 자막판+더빙판+부가영상)",
       "subTitle": false,
+      "info": {
+        "open": "2021.05.26.",
+        "actors": [
+          "엠마 스톤"
+        ],
+        "country": "미국",
+        "time": 134,
+        "genre": "드라마",
+        "age": 12,
+        "director": "크레이그 질레스피"
+      },
+      "grad": 9.2,
       "type": "HD",
-      "grad": 9.5,
-      "price": 9600,
-      "youth": true,
       "priceType": "구매",
-      "sold": 700,
-      "event" : true,
-      "hot" : false
+      "price": 10900,
+      "sales": 3600,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=445793",
+      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202",
-      "mainTitle": "크루엘라 (패키지: 자막판+더빙판+부가영상)",
-      "subTitle": false,
+      "mainTitle": "루카",
+      "subTitle": true,
+      "info": {
+        "open": "2021.06.17.",
+        "actors": [
+          "제이콥 트렘블레이",
+          "잭 딜런 그레이저",
+          "엠마 버만"
+        ],
+        "country": "미국",
+        "time": 95,
+        "genre": "액션",
+        "age": 0,
+        "director": "엔리코 카사로사"
+      },
+      "grad": 9.0,
       "type": "HD",
-      "grad": 9.5,
-      "price": 9600,
-      "youth": true,
+      "priceType": "대여",
+      "price": 5500,
+      "sales": 3700,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=452652",
+      "img": "https://tvstore-phinf.pstatic.net/20210723_257/1627004729177LxFjr_JPEG/LUCA_MediaPoster_MAIN-A.jpg?type=f148_202"
+    },{
+      "mainTitle": "올드",
+      "subTitle": false,
+      "info": {
+        "open": "2021.08.18.",
+        "actors": [
+        ],
+        "country": "미국",
+        "time": 108,
+        "genre": "공포/스릴러",
+        "age": 12,
+        "director": "M.나이트 샤말란"
+      },
+      "grad": 6.7,
+      "type": "HD",
       "priceType": "구매",
-      "sold": 707,
-      "event" : true,
-      "hot" : false
+      "price": 14900,
+      "sales": 1000,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=457660",
+      "img": "https://movie-phinf.pstatic.net/20210728_151/1627456000405n3Uga_JPEG/movie_image.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202",
-      "mainTitle": "크루엘라 (패키지: 자막판+더빙판+부가영상)",
+      "mainTitle": "이스케이프 룸 2: 노 웨이 아웃",
       "subTitle": false,
+      "info": {
+        "open": "2021.07.14.",
+        "actors": [
+          "테일러 러셀",
+          "로건 밀러"
+        ],
+        "country": "미국",
+        "time": 88,
+        "genre": "액션",
+        "age": 15,
+        "director": "애덤 로비텔"
+      },
+      "grad": 8.0,
       "type": "HD",
-      "grad": 9.5,
-      "price": 9600,
-      "youth": true,
       "priceType": "구매",
-      "sold": 120,
-      "event" : true,
-      "hot" : false
+      "price": 8900,
+      "sales": 900,
+      "event": false,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=460866",
+      "img": "https://tvstore-phinf.pstatic.net/20210826_36/1629943964659nTdae_JPEG/2__0714.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202",
-      "mainTitle": "크루엘라 (패키지: 자막판+더빙판+부가영상)",
+      "mainTitle": "싱크홀",
       "subTitle": false,
+      "info": {
+        "open": "2021.08.11.",
+        "actors": [
+          "차승원",
+          "김성균",
+          "이광수",
+          "김해준"
+        ],
+        "country": "대한민국",
+        "time": 114,
+        "genre": "드라마",
+        "age": 12,
+        "director": "김지훈"
+      },
+      "grad": 6.6,
       "type": "HD",
-      "grad": 9.5,
-      "price": 9600,
-      "youth": true,
       "priceType": "구매",
-      "sold": 700,
-      "event" : true,
-      "hot" : false
+      "price": 14900,
+      "sales": 800,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=461067",
+      "img": "https://movie-phinf.pstatic.net/20210726_114/1627265960693kkM0B_JPEG/movie_image.jpg?type=f148_202"
     },
     {
-      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202",
+      "mainTitle": "레미니센스",
+      "subTitle": false,
+      "info": {
+        "open": "2021.08.25.",
+        "actors": [
+          "레베카 퍼거슨",
+          "탠디 뉴튼",
+          "휴 잭맨"
+        ],
+        "country": "미국",
+        "time": 111,
+        "genre": "공포/스릴러",
+        "age": 12,
+        "director": "리사 조이"
+      },
+      "grad": 7.0,
+      "type": "HD",
+      "priceType": "구매",
+      "price": 16400,
+      "sales": 700,
+      "event": false,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=454587",
+      "img": "https://tvstore-phinf.pstatic.net/20210914_165/16315950048003l0Xx_JPEG/REMINISCENCE_PVOD_STD_V_DD_KA_TT_2160x2880_300dpi_KR.jpg?type=f148_202"
+    },
+    {
+      "mainTitle": "블랙 위도우(패키지: 자막판+더빙판+부가영상)",
+      "subTitle": false,
+      "info": {
+        "open": "2021.07.07.",
+        "actors": [
+          "스칼릿 조핸슨",
+          "데이빗 하버",
+          "플로렌스 퓨",
+          "레이첼 와이즈"
+        ],
+        "country": "미국",
+        "time": 133,
+        "genre": "액션",
+        "age": 12,
+        "director": "케이트 쇼트랜드"
+      },
+      "grad": 8.5,
+      "type": "HD",
+      "priceType": "구매",
+      "price": 10900,
+      "sales": 600,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=454587",
+      "img": "https://tvstore-phinf.pstatic.net/20210803_284/1627979114724m2U3a_JPEG/MARVEL_BlackWidow_MediaPoster_A.jpg?type=f148_202"
+    },
+    {
       "mainTitle": "크루엘라 (패키지: 자막판+더빙판+부가영상)",
       "subTitle": false,
+      "info": {
+        "open": "2021.05.26.",
+        "actors": [
+          "엠마 스톤"
+        ],
+        "country": "미국",
+        "time": 134,
+        "genre": "드라마",
+        "age": 12,
+        "director": "크레이그 질레스피"
+      },
+      "grad": 9.2,
       "type": "HD",
-      "grad": 9.5,
-      "price": 9600,
-      "youth": true,
       "priceType": "구매",
-      "sold": 370,
-      "event" : true,
-      "hot" : false
+      "price": 10900,
+      "sales": 500,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=445793",
+      "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202"
+    },
+    {
+      "mainTitle": "루카",
+      "subTitle": true,
+      "info": {
+        "open": "2021.06.17.",
+        "actors": [
+          "제이콥 트렘블레이",
+          "잭 딜런 그레이저",
+          "엠마 버만"
+        ],
+        "country": "미국",
+        "time": 95,
+        "genre": "액션",
+        "age": 0,
+        "director": "엔리코 카사로사"
+      },
+      "grad": 9.0,
+      "type": "HD",
+      "priceType": "대여",
+      "price": 5500,
+      "sales": 400,
+      "event": true,
+      "hot": false,
+      "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=452652",
+      "img": "https://tvstore-phinf.pstatic.net/20210723_257/1627004729177LxFjr_JPEG/LUCA_MediaPoster_MAIN-A.jpg?type=f148_202"
     }
   ]
 }

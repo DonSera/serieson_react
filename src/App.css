@@ -149,6 +149,7 @@ margin, padding
     width: var(--center-width);
     height: 215px;
     padding: var(--wrap-padding);
+    background-color: lightskyblue;
 }
 
 

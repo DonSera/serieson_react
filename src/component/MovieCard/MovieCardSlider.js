@@ -17,7 +17,7 @@ function MovieCardSlider({obj}) {
             <div className={styles[`info`]}>
                 <Quality text={obj.type}/>
                 {obj["subTitle"] ? <SubTitle/> : <></>}
-                {obj["youth"] ? <></> : <Youth/>}
+                {obj["info"]["age"] < 19 ? <></> : <Youth/>}
                 <span className={styles['main-title']}>{obj["mainTitle"]}</span>
             </div>
             <div className={styles[`grad`]}>

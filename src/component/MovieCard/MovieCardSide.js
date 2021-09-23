@@ -11,8 +11,8 @@ function MovieCardSide({obj, rank}) {
             <span className={styles[`info`]}>
                 <Rank num={rank}/>
                 {obj["subTitle"] ? <SubTitle/> : <></>}
-                {obj["youth"] ? <></> : <Youth/>}
-                <span>{obj["mainTitle"]}</span>
+                {obj["info"]["age"] < 19 ? <></> : <Youth/>}
+                <span className={styles['main-title']}>{obj["mainTitle"]}</span>
             </span>
         </section>
     )

@@ -18,8 +18,8 @@ function MovieCard({obj}) {
                 <div className={styles[`info`]}>
                     <Quality text={obj.type}/>
                     {obj["subTitle"] ? <SubTitle/> : <></>}
-                    {obj["youth"] ? <></> : <Youth/>}
-                    <span>{obj["mainTitle"]}</span>
+                    {obj["info"]["age"] < 19 ? <></> : <Youth/>}
+                    <span className={styles['main-title']}>{obj["mainTitle"]}</span>
                 </div>
                 <div className={styles[`grad`]}>
                     <span>별 개수 </span>

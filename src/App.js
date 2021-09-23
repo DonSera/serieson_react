@@ -20,7 +20,7 @@ function App() {
     useEffect(() => {
         fetch().then(arr => {
                 setInfo(arr);
-                setSort(sortRank(arr, 10));
+                setSort(sortRank(arr, "sales", 10));
                 setSelectEvent(select(arr, 'event', 10));
             }
         )
@@ -129,7 +129,6 @@ function App() {
                                    height={'20%'}/>
                         <div className={`margin`}/>
                         <SmallWindow width={'100%'}
-                                     height={'65%'}
                                      header={'3%'}
                                      contents={sort.map((obj, index) => {
                                          if (index > 9) return '';
@@ -144,10 +143,8 @@ function App() {
 
                 <section className={`app-service`}>
                     <SmallWindow width={'35%'}
-                                 height={'100%'}
                                  header={'10%'}/>
                     <SmallWindow width={'65%'}
-                                 height={'100%'}
                                  header={'10%'}/>
                 </section>
 

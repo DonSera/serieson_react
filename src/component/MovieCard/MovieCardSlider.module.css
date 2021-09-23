@@ -1,4 +1,4 @@
-.movie-card{
+.movie-card {
     position: relative;
     background-color: wheat;
     display: inline-block;
@@ -7,22 +7,29 @@
     width: 90%;
 }
 
-.img{
-    margin : auto;
+.img {
+    margin: auto;
     width: 90%;
     height: 40%;
 }
 
-.font-size{
+.font-size {
     font-size: 0.8em;
 }
 
-.info{
+.info {
     margin: auto;
+    padding: 10% 0 0 0;
     width: 80%;
 
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     /*한줄로 표시*/
+}
+
+.main-title {
+    font: caption;
+    font-size: 1.2em;
+    font-weight: bold;
 }
