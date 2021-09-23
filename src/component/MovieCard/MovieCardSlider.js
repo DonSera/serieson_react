@@ -3,6 +3,7 @@ import CircleIcon from "../Icon";
 import Quality from "../Icon/Quality";
 import SubTitle from "../Icon/SubTitle";
 import Youth from "../Icon/Youth";
+import StarRatings from "react-star-ratings";
 
 function MovieCardSlider({obj}) {
     // obj : 이미지, 이름 , 별점, 가격, +a
@@ -15,7 +16,7 @@ function MovieCardSlider({obj}) {
                     : <></>}
             <a className={'link'} href={obj['url']}>
                 <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
-                <div className={styles[`info`]}>
+                <div className={styles[`title`]}>
                     <Quality text={obj.type}/>
                     {obj["subTitle"] ? <SubTitle/> : <></>}
                     {obj["info"]["age"] < 19 ? <></> : <Youth/>}
@@ -23,8 +24,15 @@ function MovieCardSlider({obj}) {
                 </div>
             </a>
             <div className={styles[`grad`]}>
-                <span>별 개수 </span>
-                <span>{obj["grad"]}</span>
+                <StarRatings
+                    rating={obj["grad"]/2}
+                    starEmptyColor={'grey'}
+                    starRatedColor={'red'}
+                    numberOfStars={5}
+                    starDimension="17px"
+                    starSpacing="1px"
+                />
+                <span>{obj["grad"]%1 ? obj["grad"] : `${obj["grad"]}.0`}</span>
             </div>
             <div className={styles[`price`]}>
                 <span>{obj["priceType"]}</span>

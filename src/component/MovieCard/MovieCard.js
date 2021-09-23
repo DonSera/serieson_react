@@ -1,4 +1,5 @@
 import styles from './MovieCard.module.css'
+import StarRatings from "react-star-ratings";
 import Quality from "../Icon/Quality";
 import SubTitle from "../Icon/SubTitle";
 import CircleIcon from "../Icon";
@@ -27,8 +28,15 @@ function MovieCard({obj}) {
                 </a>
 
                 <div className={styles[`grad`]}>
-                    <span>별 개수 </span>
-                    <span>{obj["grad"]}</span>
+                    <StarRatings
+                        rating={obj["grad"]/2}
+                        starEmptyColor={'grey'}
+                        starRatedColor={'red'}
+                        numberOfStars={5}
+                        starDimension="12px"
+                        starSpacing="1px"
+                    />
+                    <span>{obj["grad"]%1 ? obj["grad"] : `${obj["grad"]}.0`}</span>
                 </div>
                 <div className={styles[`price`]}>
                     <span>{obj["priceType"]}</span>

@@ -1,7 +1,8 @@
 .movie-card {
     position: relative;
-    background-color: wheat;
     display: inline-block;
+    background-color: wheat;
+
     margin-top: 5%;
     padding-top: 5%;
     width: 90%;
@@ -26,7 +27,7 @@ a:hover{
      color: darkblue;
  }
 
-.info {
+.title {
     margin: auto;
     padding: 10% 0 0 0;
     width: 80%;
