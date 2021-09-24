@@ -6,6 +6,9 @@
     padding-top: 5%;
     width: 90%;
 }
+.movie-card:hover{
+    cursor: pointer;
+}
 
 .img {
     margin: auto;
