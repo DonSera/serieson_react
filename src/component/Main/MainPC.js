@@ -1,6 +1,5 @@
 import './Main.css';
 import MovieCard from '../MovieCard'
-import MovieCardSide from "../MovieCard/MovieCardSide";
 import Advertise from "../Advertise/Advertise";
 import SmallWindow from "../Window/SmallWindow";
 import Header from "../Header/Header";
@@ -14,6 +13,7 @@ import {useEffect, useState} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import MovieCardMobile from "../MovieCard/MovieCardMobile";
 
 
 function MainPC() {
@@ -62,7 +62,7 @@ function MainPC() {
 
     function RenderTest() {
         function eventMap() {
-            return event.map((text,index) => <li key={`event_text_${index}`}>{text}</li>);
+            return event.map((text, index) => <li key={`event_text_${index}`}>{text}</li>);
         }
 
         return <div className={'event-wrap'}> {eventMap()} </div>;
@@ -84,7 +84,7 @@ function MainPC() {
                             {info.map((obj, index) => {
                                 return (
                                     <MovieCard key={`suggestion_${obj.name}_${index}`}
-                                                     obj={obj} type={'slider'}/>
+                                               obj={obj} type={'slider'}/>
                                 );
                             })}
                         </Slider>
@@ -139,9 +139,9 @@ function MainPC() {
                                      url={"https://serieson.naver.com/movie/top100List.nhn"}
                                      contents={sort.map((obj, index) => {
                                          if (index > 9) return '';
-                                         else return <MovieCardSide key={`side_${obj.name}_${index}`}
-                                                                    obj={obj}
-                                                                    rank={index + 1}/>;
+                                         else return <MovieCardMobile key={`side_${obj.name}_${index}`}
+                                                                      obj={obj}
+                                                                      rank={index + 1}/>;
                                      })}/>
                         <div className={`margin`}/>
                         <Advertise width={'100%'} height={'8%'}/>
@@ -162,7 +162,7 @@ function MainPC() {
 
                 <section className={`footer`}>
                     <div className={`footer-info`}>
-                        {footerInfo.map((text,index) => <div key={`footer_info_${index}`}>{text}</div>)}
+                        {footerInfo.map((text, index) => <div key={`footer_info_${index}`}>{text}</div>)}
                     </div>
                 </section>
             </div>

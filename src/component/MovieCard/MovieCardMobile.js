@@ -1,42 +1,49 @@
 import styles from './MovieCardMobile.module.css'
 import SubTitle from "../Icon/SubTitle";
 import Youth from "../Icon/Youth";
-import CircleIcon from "../Icon";
 import Quality from "../Icon/Quality";
+import EventCircle from "./CardEle/EventCircle";
+import Rank from "../Icon/Rank";
 
-function MovieCarMobile({obj}) {
-    // obj : 이미지, 이름 , 별점, 가격, +a
+function MovieCarMobile({obj, rank = 0}) {
+
     return (
         <a className={`${styles[`movie-card`]} ${styles[`font-size`]}`} href={obj['url']}>
-            {obj['hot']
-                ? <CircleIcon text={'HOT'} diameter={'40px'} fontSize={'10px'}/>
-                : obj['event']
-                    ? <CircleIcon text={'Event'} diameter={'40px'} fontSize={'10px'}/>
-                    : <></>
-            }
+            {!rank
+                ? <EventCircle obj={obj} size={40}/>
+                : <></>}
+
             <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
             <span className={styles[`info`]}>
                 <section>
-                    <Quality text={obj.type}/>
+                    {rank ? <Rank num={rank}/> : <></>}
+                    {!rank
+                        ? <Quality text={obj.type}/>
+                        : <></>}
                     {obj["subTitle"] ? <SubTitle/> : <></>}
                     {obj["info"]["age"] < 19 ? <></> : <Youth/>}
                     <span className={styles['main-title']}>{obj["mainTitle"]}</span>
-                    <span>{`(${obj['priceType']})`}</span>
+                    {!rank
+                        ? <span>{`(${obj['priceType']})`}</span>
+                        : <></>}
                 </section>
-                <section>
-                    <span>{`${obj['info']['time']}분 | `}</span>
-                    <span>{`${obj['info']['age']}세관람가`}</span>
-                </section>
+                {!rank
+                    ? <section>
+                        <span>{`${obj['info']['time']}분 | `}</span>
+                        <span>{`${obj['info']['age']}세관람가`}</span>
+                    </section>
+                    : <></>}
+
                 <section>
                     <span>{obj['info']['actors'].join(', ')}</span>
                 </section>
-                <section>
-                    <span>{obj['info']['open']}</span>
-                </section>
-                <section>
-                    <span>{obj['priceType']}</span>
-                    <span>{obj['price']}</span>
-                </section>
+
+                {!rank
+                    ? <section>
+                        <span>{obj['priceType']}</span>
+                        <span>{obj['price']}</span>
+                    </section>
+                    : <></>}
             </span>
         </a>
     )
