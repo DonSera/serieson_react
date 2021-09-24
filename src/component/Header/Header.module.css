@@ -33,38 +33,64 @@ li:hover, ul > span > span:hover{
     cursor: pointer;
 }
 
+
 #logo {
     display: inline-flex;
     margin: 4px 0 4px 0;
-    width: var(--center-width);
 
     font-weight: bold;
-    font-size: 2em;
     justify-content: space-between;
-
 }
+#logo.pc{
+    font-size: 2em;
+}
+#logo.mobile{
+    font-size: 1.2em;
+}
+
 
 #category {
     margin: 0;
     padding: 0;
     display: inline-block;
-    width: var(--center-width);
 }
-
-#category li {
-    height: 100%;
+#category.pc li{
     padding: 20px;
     font-weight: bold;
     font-size: 1.2em;
 }
-
-
-#detail {
-    margin : 5px 0 5px 0;
-    display: inline-block;
-    width: var(--center-width);
+#category.mobile li{
+    padding: 10px;
+    font-size: 1em;
 }
 
-#detail li {
+
+#detail.pc {
+    margin : 5px 0 5px 0;
+    display: inline-block;
+}
+#detail.mobile ul{
+    /*display: inline-flex;*/
+    justify-content: space-evenly;
+}
+
+#detail.pc li {
     padding: 0 10px 0 10px;
+    font-size: 1em;
+}
+#detail.mobile li{
+
+    font-size: 0.8em;
+}
+
+
+
+
+.pc{
+    width: var(--center-width);
+
+}
+.mobile{
+    width: 100%;
+    min-width: 92px;
 }
