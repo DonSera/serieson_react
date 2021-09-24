@@ -5,11 +5,11 @@ import MainMobile from "./component/Main/MainMobile";
 
 function App() {
     const isPc = useMediaQuery({
-        query : "(min-width:768px)"
+        query : "(min-width:1000px)"
     });
 
     const isMobile = useMediaQuery({
-        query : "(max-width:767px)"
+        query : "(max-width:999px)"
     });
 
     return (
