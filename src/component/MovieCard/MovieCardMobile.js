@@ -6,48 +6,76 @@ import EventCircle from "./CardEle/EventCircle";
 import Rank from "../Icon/Rank";
 
 function MovieCarMobile({obj, rank = 0}) {
+    function title() {
+        return (
+            <>
+                {obj["subTitle"] ? <SubTitle/> : <></>}
+                {obj["info"]["age"] < 19 ? <></> : <Youth/>}
+                <span className={styles['main-title']}>{obj["mainTitle"]}</span>
+            </>
+        )
+    }
 
-    return (
-        <a className={`${styles[`movie-card`]} ${styles[`font-size`]}`} href={obj['url']}>
-            {!rank
-                ? <EventCircle obj={obj} size={40}/>
-                : <></>}
+    function actorNames() {
+        return (
+            <section>
+                <span>{obj['info']['actors'].join(', ')}</span>
+            </section>
+        )
+    }
 
-            <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
-            <span className={styles[`info`]}>
-                <section>
-                    {rank ? <Rank num={rank}/> : <></>}
-                    {!rank
-                        ? <Quality text={obj.type}/>
-                        : <></>}
-                    {obj["subTitle"] ? <SubTitle/> : <></>}
-                    {obj["info"]["age"] < 19 ? <></> : <Youth/>}
-                    <span className={styles['main-title']}>{obj["mainTitle"]}</span>
-                    {!rank
-                        ? <span>{`(${obj['priceType']})`}</span>
-                        : <></>}
-                </section>
-                {!rank
-                    ? <section>
-                        <span>{`${obj['info']['time']}분 | `}</span>
-                        <span>{obj['info']['age'] === 0 ? '전체관람가' : `${obj['info']['age']}세관람가`}</span>
-                    </section>
-                    : <></>}
+    function movieInfo() {
+        return (
+            <section>
+                <span>{`${obj['info']['time']}분 | `}</span>
+                <span>{obj['info']['age'] === 0 ? '전체관람가' : `${obj['info']['age']}세관람가`}</span>
+            </section>
+        )
+    }
 
-                <section>
-                    <span>{obj['info']['actors'].join(', ')}</span>
-                </section>
+    function moviePrice() {
+        return (
+            <section>
+                <span>{obj['priceType']}</span>
+                <span>{obj['price']}</span>
+            </section>
+        )
+    }
 
-                {!rank
-                    ? <section>
-                        <span>{obj['priceType']}</span>
-                        <span>{obj['price']}</span>
-                    </section>
-                    : <></>}
-            </span>
-        </a>
-    )
 
+    function render() {
+        if (rank) {
+            return (
+                <a className={`${styles[`movie-card`]}`} href={obj['url']}>
+                    <img className={`${styles[`img`]}`} alt={`영화 이미지`} src={obj.img}/>
+                    <span className={styles[`info`]}>
+                        <Rank num={rank}/>
+                        {title()}
+                        {actorNames()}
+                    </span>
+                </a>
+
+            );
+        } else {
+            return (
+                <a className={`${styles[`movie-card`]} ${styles['card-mobile']}`} href={obj['url']}>
+                    <EventCircle obj={obj} size={40}/>
+                    <img className={`${styles[`img`]}  ${styles[`mobile-img`]}`} alt={`영화 이미지`} src={obj.img}/>
+                    <span className={styles[`info`]}>
+                        <section>
+                            <Quality text={obj.type}/>
+                            {title()}
+                            <span>{`(${obj['priceType']})`}</span>
+                        </section>
+                        {movieInfo()}
+                        {actorNames()}
+                        {moviePrice()}
+                    </span>
+                </a>);
+        }
+    }
+
+    return render();
 }
 
 export default MovieCarMobile;
