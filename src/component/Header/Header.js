@@ -3,7 +3,7 @@ import React from "react";
 
 class Header extends React.Component {
     state = {
-        colorArray : Array(this.props.header.length).fill(false)
+        colorArray : Array(1).fill(true).concat(Array(this.props.header.length).fill(false))
     }
 
     onChange(index) {
