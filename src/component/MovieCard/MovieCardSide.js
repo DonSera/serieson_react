@@ -16,7 +16,7 @@ function MovieCardSide({obj, rank}) {
                     <span className={styles['main-title']}>{obj["mainTitle"]}</span>
                 </div>
                 <div>
-                    <span>{obj['info']['actors']}</span>
+                    <span>{obj['info']['actors'].join(', ')}</span>
                 </div>
 
             </span>

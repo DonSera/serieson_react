@@ -1,8 +1,6 @@
 .window-background{
-    /*position: relative;*/
     display: inline-block;
     box-sizing: border-box;
-    /*overflow: hidden;*/
 }
 
 .window-header{
