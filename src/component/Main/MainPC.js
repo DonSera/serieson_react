@@ -1,6 +1,5 @@
 import './Main.css';
 import MovieCard from '../MovieCard'
-import MovieCardSlider from "../MovieCard/MovieCardSlider";
 import MovieCardSide from "../MovieCard/MovieCardSide";
 import Advertise from "../Advertise/Advertise";
 import SmallWindow from "../Window/SmallWindow";
@@ -84,8 +83,8 @@ function MainPC() {
                         <Slider {...settings}>
                             {info.map((obj, index) => {
                                 return (
-                                    <MovieCardSlider key={`suggestion_${obj.name}_${index}`}
-                                                     obj={obj}/>
+                                    <MovieCard key={`suggestion_${obj.name}_${index}`}
+                                                     obj={obj} type={'slider'}/>
                                 );
                             })}
                         </Slider>
@@ -115,7 +114,7 @@ function MainPC() {
                                          contents={info.map((obj, index) => {
                                              if (index > 9) return '';
                                              else return <MovieCard key={`recent_${obj.name}_${index}`}
-                                                                    obj={obj}/>;
+                                                                    obj={obj} type={'info'}/>;
                                          })}/>
                             <div className={`margin`}/>
                             <SmallWindow windowWidth={`100%`}
@@ -125,7 +124,7 @@ function MainPC() {
                                          url={"https://serieson.naver.com/movie/categoryList.nhn?categoryCode=300003"}
                                          contents={selectEvent.map((obj, index) =>
                                              <MovieCard key={`discount_${obj.name}_${index}`}
-                                                        obj={obj}/>
+                                                        obj={obj} type={'info'}/>
                                          )}/>
                         </div>
                     </section>

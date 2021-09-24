@@ -1,53 +1,21 @@
-.movie-card{
+.movie-card {
     position: relative;
     display: inline-block;
+}
+.movie-card:hover{
+    cursor: pointer;
+}
 
-    margin : 1%;
-    padding-top: 30%;
+#info {
+    font-size: 0.6em;
+    margin: 1%;
+    padding-top: 2%;
     width: 17%;
-
 }
 
-.wrap{
-    position: absolute;
-    top : 1%;
-    left: 0;
-}
-
-.img{
-    padding: 10% 0 0 0;
-    width: 70%;
-    height: 30%;
-}
-
-.font-size{
+#slider {
     font-size: 0.8em;
-}
-
-a{
-    text-decoration-line: none;
-    color: black;
-}
-a:hover{
-    text-decoration-line: underline;
-    color: darkblue;
-}
-
-.title{
-    padding: 10% 0 0 0;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-.main-title {
-    font: caption;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-#price{
-    color: limegreen;
-    font-weight: bold;
+    margin-top: 5%;
+    padding-top: 5%;
+    width: 90%;
 }

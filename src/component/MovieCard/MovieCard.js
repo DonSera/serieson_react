@@ -1,53 +1,31 @@
 import styles from './MovieCard.module.css'
-import StarRatings from "react-star-ratings";
-import Quality from "../Icon/Quality";
-import SubTitle from "../Icon/SubTitle";
-import CircleIcon from "../Icon";
-import Youth from "../Icon/Youth";
+import EventCircle from "./CardEle/EventCircle";
+import Grad from "./CardEle/Grad";
+import Price from "./CardEle/Price";
+import Title from "./CardEle/Title";
 
-function MovieCard({obj}) {
-    // obj : 이미지, 이름 , 별점, 가격, +a
-    return (
-        <section className={`${styles[`movie-card`]} ${styles[`font-size`]}`}>
-            <div className={styles[`wrap`]}>
-                {obj['hot']
-                    ? <CircleIcon text={'HOT'} diameter={'40px'} fontSize={'10px'}/>
-                    : obj['event']
-                        ? <CircleIcon text={'Event'} diameter={'40px'} fontSize={'10px'}/>
-                        : <></>
-                }
+function MovieCard ({obj, type='info'}){
+    function render(){
+        if(type === 'info'){
+            return <section id={styles['info']} className={`${styles[`movie-card`]}`}>
+                <EventCircle obj={obj} size={40}/>
+                <Title obj={obj}/>
+                <Grad obj={obj} dimension={12} spacing={0.5}/>
+                <Price obj={obj}/>
+            </section>;
+        }
 
-                <a className={'link'} href={obj['url']}>
-                    <img className={styles[`img`]} alt={`영화 이미지`} src={obj.img}/>
-                    <div className={styles[`title`]}>
-                        <Quality text={obj.type}/>
-                        {obj["subTitle"] ? <SubTitle/> : <></>}
-                        {obj["info"]["age"] < 19 ? <></> : <Youth/>}
-                        <span className={styles['main-title']}>{obj["mainTitle"]}</span>
-                    </div>
-                </a>
+        if(type === 'slider'){
+            return <section id={styles['slider']} className={`${styles[`movie-card`]}`}>
+                <EventCircle obj={obj} size={50}/>
+                <Title obj={obj} width={50} type={'slider'}/>
+                <Grad obj={obj} dimension={17}/>
+                <Price obj={obj}/>
+            </section>;
+        }
+    }
 
-                <div className={styles[`grad`]}>
-                    <StarRatings
-                        rating={obj["grad"] / 2}
-                        starEmptyColor={'grey'}
-                        starRatedColor={'red'}
-                        numberOfStars={5}
-                        starDimension="12px"
-                        starSpacing="1px"
-                    />
-                    <span>{obj["grad"] % 1 ? obj["grad"] : `${obj["grad"]}.0`}</span>
-                </div>
-                <div className={styles[`price`]}>
-                    <span>{obj["priceType"]}</span>
-                    <span id={styles['price']}>{obj["price"] >= 1000
-                        ? `${Math.floor(obj["price"] / 1000)},${obj["price"] % 1000}`
-                        : obj["price"]}</span>
-                </div>
-            </div>
-        </section>
-    )
-
+    return render();
 }
 
 export default MovieCard;
