@@ -28,6 +28,9 @@ ul > span > span {
 li {
     float: left;
 }
+li:hover{
+    cursor: pointer;
+}
 
 #logo {
     display: inline-flex;
