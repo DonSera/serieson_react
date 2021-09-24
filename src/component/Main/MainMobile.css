@@ -1,0 +1,9 @@
+.adver-background{
+    position: relative;
+    width: 100%;
+    padding-top: 40%;
+    background-color: lightgrey;
+}
+.adver{
+    position: absolute;
+}

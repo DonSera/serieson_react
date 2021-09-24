@@ -1,4 +1,4 @@
-import './Main.css';
+import './MainMobile.css';
 import {fetchHeader, fetchMovie} from "../../function/fetch";
 import sortRank from "../../function/sortRank";
 import MovieCardMobile from "../MovieCard/MovieCardMobile";
@@ -20,10 +20,29 @@ function MainMobile() {
         })
     }, [])
 
+
+    function advertise(){
+        return(
+            <div className={'adver-background'}>
+                <div className={'adver'}/>
+            </div>
+        )
+    }
+
     return <div>
         <Header headerObj={header} type={'Mobile'}/>
-        {sort.map((obj, index) => <MovieCardMobile key={`side_${obj.name}_${index}`}
-                                                   obj={obj}/>)}
+        {advertise()}
+        {sort.map((obj, index) => {
+            if(index === 4){
+                return (
+                    <>
+                        {advertise()}
+                        <MovieCardMobile key={`side_${obj.name}_${index}`} obj={obj}/>
+                    </>
+                )
+            }
+            return <MovieCardMobile key={`side_${obj.name}_${index}`} obj={obj}/>
+        })}
     </div>;
 }
 

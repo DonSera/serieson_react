@@ -1,4 +1,4 @@
-import './Main.css';
+import './MainPC.css';
 import MovieCard from '../MovieCard'
 import Advertise from "../Advertise/Advertise";
 import SmallWindow from "../Window/SmallWindow";

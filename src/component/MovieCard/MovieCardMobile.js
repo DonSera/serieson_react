@@ -42,7 +42,6 @@ function MovieCarMobile({obj, rank = 0}) {
         )
     }
 
-
     function render() {
         if (rank) {
             return (
