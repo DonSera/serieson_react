@@ -16,9 +16,10 @@ import MovieCardMobile from "../MovieCard/MovieCardMobile";
 
 
 function MainPC() {
-    const[header, setHeader] = useState({})
-    const [info, setInfo] = useState([]);
+    const [header, setHeader] = useState({})
+    const [info, setInfo] = useState([])
     const [sort, setSort] = useState([])
+    const [recent, setRecent] = useState([])
     const [selectEvent, setSelectEvent] = useState([])
 
     useEffect(() => {
@@ -26,6 +27,8 @@ function MainPC() {
             setInfo(arr);
             setSort(sortRank(arr, "sales", 10));
             setSelectEvent(select(arr, 'event', 10));
+            setRecent(sortRank(arr, ['info', 'open'], 10));
+
         })
 
         fetchHeader().then(obj => {
@@ -107,7 +110,7 @@ function MainPC() {
                                          headerHeight={`30px`}
                                          headerText={'최신영화'}
                                          url={"https://serieson.naver.com/movie/recentList.nhn"}
-                                         contents={info.map((obj, index) => {
+                                         contents={recent.map((obj, index) => {
                                              if (index > 9) return '';
                                              else return <MovieCard key={`recent_${obj.name}_${index}`}
                                                                     obj={obj} type={'info'}/>;
