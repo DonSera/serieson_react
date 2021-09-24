@@ -1,0 +1,45 @@
+.font-size{
+    font-size: 0.8em;
+}
+
+.movie-card{
+    width: 96%;
+    height: 8%;
+    margin: 1%;
+    padding: 1%;
+
+    display: flex;
+    align-items: center;
+    border-top: 1px solid darkgrey;
+}
+a{
+    text-decoration-line: none;
+    color: black;
+
+}
+a:hover{
+    text-decoration-line: underline;
+    color: darkblue;
+}
+
+.img{
+    margin: 0 5% 0 5%;
+    width: 15%;
+    height: 85%;
+    align-items: center;
+}
+
+.info{
+    width: 70%;
+
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-title {
+    font: caption;
+    font-size: 1em;
+    font-weight: bold;
+}
