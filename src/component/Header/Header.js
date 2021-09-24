@@ -6,15 +6,17 @@ function Header({header, headerDetail}) {
     const [colorD, setColorD] = useState([])
 
     useEffect(() => {
-        if(header.length){
-            const newArray1 = Array(1).fill(true).concat(Array(header.length - 1).fill(false))
+        if (header.length) {
+            const newArray = Array(1).fill(true)
+            const newArray1 = newArray.concat(Array(header.length - 1).fill(false))
             setColorH(newArray1)
         }
     }, [header])
 
     useEffect(() => {
-        if(headerDetail.length){
-            const newArray2 = Array(1).fill(true).concat(Array(headerDetail.length - 1).fill(false))
+        if (headerDetail.length) {
+            const newArray = Array(1).fill(true)
+            const newArray2 = newArray.concat(Array(headerDetail.length - 1).fill(false))
             setColorD(newArray2)
         }
     }, [headerDetail])

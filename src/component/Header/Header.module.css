@@ -8,27 +8,28 @@
 }
 
 .divider {
+    margin: 0;
+    padding: 0;
     border-bottom: 1px solid lightgrey;
 }
 
 ul {
-    /*점 없애기*/
+    display: flex;
     list-style: none;
-    margin: 10px
+    margin: 0;
+    padding: 0;
 }
 
 ul > span {
-    float: right;
+    align-self: center;
+    margin-left: auto;
 }
 
 ul > span > span {
-    padding: 0 20px 0 20px;
+    padding: 0 10px 0 10px;
 }
 
-li {
-    float: left;
-}
-li:hover{
+li:hover, ul > span > span:hover{
     cursor: pointer;
 }
 
@@ -44,13 +45,15 @@ li:hover{
 }
 
 #category {
-    margin : 8px 0 8px 0;
+    margin: 0;
+    padding: 0;
     display: inline-block;
     width: var(--center-width);
 }
 
 #category li {
-    padding: 0 5px 0 5px;
+    height: 100%;
+    padding: 20px;
     font-weight: bold;
     font-size: 1.2em;
 }
