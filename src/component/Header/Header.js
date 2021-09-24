@@ -1,32 +1,60 @@
 import styles from './Header.module.css'
+import {getDetail, getHeaderKeys} from "../../function/getHeader";
 import {useEffect, useState} from "react";
 
-function Header({header, headerDetail}) {
+function Header({headerObj}) {
+    const [headerKeys, setHeaderKeys] = useState([])
+    const [headerDetail, setDetail] = useState([])
+
     const [colorH, setColorH] = useState([])
     const [colorD, setColorD] = useState([])
 
     useEffect(() => {
-        if (header.length) {
-            const newArray = Array(1).fill(true)
-            const newArray1 = newArray.concat(Array(header.length - 1).fill(false))
-            setColorH(newArray1)
+        console.log('obj')
+        console.dir(headerObj)
+
+        if(Object.keys(headerObj).length){
+            setHeaderKeys(getHeaderKeys(headerObj));
+            setDetail(getDetail(headerObj, getHeaderKeys(headerObj)[0]))
         }
-    }, [header])
+
+        getHeaderKey()
+        getDetailKey()
+    }, [headerObj])
 
     useEffect(() => {
+        getHeaderKey()
+    }, [headerKeys])
+
+    useEffect(() => {
+        getDetailKey()
+    }, [headerDetail])
+
+    function getHeaderKey(){
+        if (headerKeys.length) {
+            const newArray = Array(1).fill(true)
+            const newArray1 = newArray.concat(Array(headerKeys.length - 1).fill(false))
+            setColorH(newArray1)
+        }
+    }
+
+    function getDetailKey(){
         if (headerDetail.length) {
             const newArray = Array(1).fill(true)
             const newArray2 = newArray.concat(Array(headerDetail.length - 1).fill(false))
             setColorD(newArray2)
         }
-    }, [headerDetail])
+    }
 
 
     function onChange(index, fuc) {
         if (fuc === "H") {
-            const newColorArray = Array(header.length).fill(false);
+            const newColorArray = Array(headerKeys.length).fill(false);
             newColorArray[index] = true;
             setColorH(newColorArray)
+
+            setDetail(getDetail(headerObj, headerKeys[index]))
+
         } else if (fuc === "D") {
             const newColorArray = Array(headerDetail.length).fill(false);
             newColorArray[index] = true;
@@ -47,9 +75,9 @@ function Header({header, headerDetail}) {
             <div id={styles['category']}>
                 <ul>
                     {
-                        header.map((text, index) => <li key={`header_text_${index}`}
-                                                        style={{backgroundColor: colorH[index] ? "green" : ""}}
-                                                        onClick={() => onChange(index, "H")}>{text}</li>)
+                        headerKeys.map((text, index) => <li key={`header_text_${index}`}
+                                                           style={{backgroundColor: colorH[index] ? "green" : ""}}
+                                                           onClick={() => onChange(index, "H")}>{text}</li>)
                     }
                     <span>
                         <span>My</span>

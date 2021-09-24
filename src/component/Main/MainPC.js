@@ -5,7 +5,6 @@ import SmallWindow from "../Window/SmallWindow";
 import Header from "../Header/Header";
 
 import {fetchHeader, fetchMovie} from "../../function/fetch";
-import {getDetail, getHeaderKeys} from "../../function/getHeader";
 import sortRank from "../../function/sortRank";
 import select from "../../function/select";
 
@@ -17,8 +16,7 @@ import MovieCardMobile from "../MovieCard/MovieCardMobile";
 
 
 function MainPC() {
-    const [headerKeys, setHeaderKeys] = useState([])
-    const [headerDetail, setDetail] = useState([])
+    const[header, setHeader] = useState({})
     const [info, setInfo] = useState([]);
     const [sort, setSort] = useState([])
     const [selectEvent, setSelectEvent] = useState([])
@@ -31,8 +29,7 @@ function MainPC() {
         })
 
         fetchHeader().then(obj => {
-            setHeaderKeys(getHeaderKeys(obj));
-            setDetail(getDetail(obj, getHeaderKeys(obj)[0]))
+            setHeader(obj)
         })
 
     }, [])
@@ -68,12 +65,11 @@ function MainPC() {
         return <div className={'event-wrap'}> {eventMap()} </div>;
     }
 
-
     return (
         <div className="App">
             <section id={'topBackground'}/>
             <section className={`header`}>
-                <Header header={headerKeys} headerDetail={headerDetail}/>
+                <Header headerObj={header}/>
             </section>
 
 
