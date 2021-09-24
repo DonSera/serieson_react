@@ -30,7 +30,7 @@ function MovieCarMobile({obj, rank = 0}) {
                 {!rank
                     ? <section>
                         <span>{`${obj['info']['time']}분 | `}</span>
-                        <span>{`${obj['info']['age']}세관람가`}</span>
+                        <span>{obj['info']['age'] === 0 ? '전체관람가' : `${obj['info']['age']}세관람가`}</span>
                     </section>
                     : <></>}
 
