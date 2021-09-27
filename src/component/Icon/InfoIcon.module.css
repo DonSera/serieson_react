@@ -1,0 +1,31 @@
+.quality{
+    background-color: dodgerblue;
+    padding: 0.5%;
+    border-radius: 10%;
+    color: white;
+    font-weight: bold;
+}
+
+.rank{
+    background-color: khaki;
+    padding: 1%;
+    border-radius: 10%;
+    color: black;
+    font-weight: bold;
+}
+
+.sub{
+    background-color: chocolate;
+    padding: 0.5%;
+    border-radius: 10%;
+    color: white;
+    font-weight: bold;
+}
+
+.youth{
+    background-color: darkred;
+    padding: 2%;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.5em;
+}
