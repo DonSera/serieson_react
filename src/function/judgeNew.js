@@ -5,7 +5,7 @@ function judgeNew(date) {
 
     const sinceOpenDay = (today-diffDate)/(1000 * 3600 * 24);
 
-    return sinceOpenDay < 35;
+    return sinceOpenDay < 15;
 }
 
 export default judgeNew;
