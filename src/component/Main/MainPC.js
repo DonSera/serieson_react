@@ -27,7 +27,6 @@ function MainPC() {
             setSort(sortRank(arr, "sales", 10));
             setSelectEvent(select(arr, 'event', 10));
             setRecent(sortRank(arr, ['info', 'open'], 10));
-
         })
 
         fetchHeader().then(obj => {
@@ -164,6 +163,7 @@ function MainPC() {
                                         id={'appleStore'}/>
                                      <a href={'https://appdown.pstatic.net/naver/NaverMediaPlayer/setup/SeriesPlayerInst.exe'}
                                         id={'windowsPlayer'}/>
+                                     <div className={`margin`}/>
                                  </div>}/>
                 </section>
                 <section className={`footer`}>

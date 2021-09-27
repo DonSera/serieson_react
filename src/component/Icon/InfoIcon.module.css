@@ -42,6 +42,9 @@
     display: flex;
     width: 51px;
     height: 51px;
+
+    top: 0;
+    left: 0;
 }
 
 #rank{
