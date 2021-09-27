@@ -5,9 +5,9 @@ export function Quality() {
 }
 
 export function Rank({num}) {
-    const positionPxNum = (400+num*20+4) *(-1)
-    return <span id={styles['rank']} className={styles['sp_home_new_v3']}
-    style={{backgroundPosition: `${positionPxNum}px -521px`}}/>
+    const positionPxNum = (400 + num * 20 + 4) * (-1)
+    return <span id={styles['rank']} className={styles['sp_home_new_v7']}
+                 style={{backgroundPosition: `${positionPxNum}px -521px`}}/>
 }
 
 export function SubTitle() {
@@ -16,4 +16,14 @@ export function SubTitle() {
 
 export function Youth() {
     return <span id={styles['youth']} className={styles['spr_adult_ico_v2']}/>;
+}
+
+export function Circle({name, size}){
+    if (size > 45) {
+        return <span id={styles[name]} className={`${styles['sp_home_new_v7']} ${styles['circle']}`}/>
+    } else {
+        return <span className={styles['zoom-out']}>
+            <span id={styles[name]} className={`${styles['sp_home_new_v7']} ${styles['circle']}`}/>
+        </span>
+    }
 }

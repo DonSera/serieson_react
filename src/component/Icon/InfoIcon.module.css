@@ -30,14 +30,41 @@
     background-position: -35px 0;
 }
 
-.sp_home_new_v3{
-    background-image: url("https://ssl.pstatic.net/static/nstore/series_on/sp_home_new_v3.png");
+.sp_home_new_v7{
+    background-image: url("https://ssl.pstatic.net/static/nstore/series_on/sp_home_new_v7.png");
     display: inline-block;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
+.circle{
+    position: absolute;
+    display: flex;
+    width: 51px;
+    height: 51px;
+}
+
 #rank{
     width: 15px;
     height: 16px;
+}
+
+#event{
+    background-position: -252px 0;
+}
+
+#hot{
+    background-position: -139px 0;
+}
+
+#new{
+    background-position: -307px 0;
+}
+
+#free{
+    background-position: -195px 0;
+}
+
+.zoom-out{
+    zoom: 0.8;
 }

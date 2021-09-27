@@ -1,12 +1,11 @@
-function judgeNew(obj) {
+function judgeNew(date) {
     const today = new Date();
 
-    const openDate = obj['info']['open'];
-    const diffDate = new Date(openDate);
+    const diffDate = new Date(date);
 
     const sinceOpenDay = (today-diffDate)/(1000 * 3600 * 24);
 
-    return sinceOpenDay > 30;
+    return sinceOpenDay < 35;
 }
 
 export default judgeNew;
