@@ -1,31 +1,43 @@
-.quality{
-    background-color: dodgerblue;
-    padding: 0.5%;
-    border-radius: 10%;
-    color: white;
-    font-weight: bold;
+.ico_mv_lst6 {
+    background-image: url("https://ssl.pstatic.net/static/nstore/series_on/ico_mv_lst6.png");
+    display: inline-block;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-.rank{
-    background-color: khaki;
-    padding: 1%;
-    border-radius: 10%;
-    color: black;
-    font-weight: bold;
+#HD {
+    background-position: -247px 0;
+    width: 23px;
+    height: 16px;
 }
 
-.sub{
-    background-color: chocolate;
-    padding: 0.5%;
-    border-radius: 10%;
-    color: white;
-    font-weight: bold;
+#subTitle {
+    width: 29px;
+    height: 16px;
+    background-position: -57px -46px;;
 }
 
-.youth{
-    background-color: darkred;
-    padding: 2%;
-    border-radius: 50%;
-    color: white;
-    font-size: 0.5em;
+.spr_adult_ico_v2 {
+    background-image: url("https://ssl.pstatic.net/static/nstore/series_on/spr_adult_ico_v2.png");
+    display: inline-block;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#youth {
+    width: 15px;
+    height: 15px;
+    background-position: -35px 0;
+}
+
+.sp_home_new_v3{
+    background-image: url("https://ssl.pstatic.net/static/nstore/series_on/sp_home_new_v3.png");
+    display: inline-block;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#rank{
+    width: 15px;
+    height: 16px;
 }

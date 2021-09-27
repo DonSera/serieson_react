@@ -44,7 +44,6 @@ margin, padding
 }
 
 
-
 /*영화 추천*/
 .movie-suggestion {
     width: var(--center-width);
@@ -60,9 +59,11 @@ margin, padding
 
     display: inline-block;
 }
+
 .slick-prev {
     left: -60px !important;
 }
+
 .slick-prev:before {
     color: darkgrey !important;
     font-size: 50px !important;
@@ -114,7 +115,8 @@ margin, padding
     padding: var(--wrap-padding);
     background-color: lightskyblue;
 }
-.event-wrap{
+
+.event-wrap {
     display: inline-block;
     padding: 10px 0 10px 0;
     width: 80%;
@@ -124,7 +126,8 @@ margin, padding
     white-space: nowrap;
     font-size: 1em;
 }
-.event-wrap>li{
+
+.event-wrap > li {
     padding: 5px 0 5px 0;
 }
 
@@ -138,4 +141,40 @@ margin, padding
 
 .footer-info {
     margin: auto;
+}
+
+.sp_home_bottom_ui > * {
+    overflow: hidden;
+    background-image: url(https://ssl.pstatic.net/static/nstore/series_on/sp_home_bottom_ui_v2.png);
+    background-repeat: no-repeat;
+}
+
+
+.sp_home_bottom_ui > a {
+    display: inline-block;
+    width: 150px;
+    height: 46px;
+    margin: 0 5px 0 5px;
+    background-size: 254px 220px;
+    background-color: white;
+}
+
+#googlePlay {
+    background-position: 0 -80px;
+}
+
+#appleStore {
+    background-position: 0 -127px;
+}
+
+#windowsPlayer {
+    background-position: 0 -174px;
+}
+
+.service-title {
+    width: 254px;
+    height: 35px;
+    margin: 31px auto 31px;
+    background-position: 0 -35px;
+    background-size: 254px 220px;
 }

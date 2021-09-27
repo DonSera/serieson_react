@@ -14,8 +14,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-
 function MainPC() {
     const [header, setHeader] = useState({})
     const [info, setInfo] = useState([])
@@ -157,14 +155,24 @@ function MainPC() {
                     <SmallWindow windowWidth={'65%'}
                                  windowHeight={'90%'}
                                  headerHeight={'20px'}
-                                 headerText={'서비스 이용 안내'}/>
+                                 headerText={'서비스 이용 안내'}
+                                 contents={<div className={'sp_home_bottom_ui'}>
+                                     <div className={'service-title'}/>
+                                     <a href={'https://play.google.com/store/apps/details?id=com.nhn.android.navertv'}
+                                        id={'googlePlay'}/>
+                                     <a href={'https://apps.apple.com/kr/app/id530059576'}
+                                        id={'appleStore'}/>
+                                     <a href={'https://appdown.pstatic.net/naver/NaverMediaPlayer/setup/SeriesPlayerInst.exe'}
+                                        id={'windowsPlayer'}/>
+                                 </div>}/>
                 </section>
-
                 <section className={`footer`}>
                     <div className={`footer-info`}>
                         {footerInfo.map((text, index) => <div key={`footer_info_${index}`}>{text}</div>)}
                     </div>
                 </section>
+
+
             </div>
         </div>
     );
