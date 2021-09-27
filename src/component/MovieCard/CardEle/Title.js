@@ -1,7 +1,5 @@
 import styles from "./Title.module.css";
-import Quality from "../../Icon/Quality";
-import SubTitle from "../../Icon/SubTitle";
-import Youth from "../../Icon/Youth";
+import {Quality, SubTitle, Youth} from "../../Icon/InfoIcon"
 
 function Title({obj, type = 'info'}) {
     return (

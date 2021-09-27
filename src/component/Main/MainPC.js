@@ -1,5 +1,6 @@
 import './MainPC.css';
-import MovieCard from '../MovieCard'
+import MovieCard from "../MovieCard/MovieCard";
+import MovieCardMobile from "../MovieCard/MovieCardMobile";
 import Advertise from "../Advertise/Advertise";
 import SmallWindow from "../Window/SmallWindow";
 import Header from "../Header/Header";
@@ -12,7 +13,7 @@ import {useEffect, useState} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import MovieCardMobile from "../MovieCard/MovieCardMobile";
+
 
 
 function MainPC() {

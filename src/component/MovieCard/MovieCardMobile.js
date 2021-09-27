@@ -1,9 +1,7 @@
 import styles from './MovieCardMobile.module.css'
-import SubTitle from "../Icon/SubTitle";
-import Youth from "../Icon/Youth";
-import Quality from "../Icon/Quality";
+import {Quality, SubTitle, Youth, Rank} from "../Icon/InfoIcon"
 import EventCircle from "./CardEle/EventCircle";
-import Rank from "../Icon/Rank";
+
 
 function MovieCarMobile({obj, rank = 0}) {
     function title() {

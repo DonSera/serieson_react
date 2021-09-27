@@ -1,4 +1,4 @@
-import CircleIcon from "../../Icon";
+import CircleIcon from "../../Icon/CircleIcon";
 
 function EventCircle({obj, size=50}){
     function render() {
