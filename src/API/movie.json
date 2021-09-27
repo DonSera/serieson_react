@@ -20,7 +20,7 @@
       "grad": 6.7,
       "type": "HD",
       "priceType": "구매",
-      "price": 14900,
+      "price": 0,
       "sales": 10000,
       "event": true,
       "hot": false,
@@ -83,7 +83,7 @@
       "mainTitle": "레미니센스",
       "subTitle": false,
       "info": {
-        "open": "2021.08.25.",
+        "open": "2021.09.20.",
         "actors": [
           "레베카 퍼거슨",
           "탠디 뉴튼",
@@ -92,7 +92,7 @@
         "country": "미국",
         "time": 111,
         "genre": "공포/스릴러",
-        "age": 12,
+        "age": 19,
         "director": "리사 조이"
       },
       "grad": 7.0,
@@ -152,7 +152,7 @@
       "price": 10900,
       "sales": 5000,
       "event": true,
-      "hot": false,
+      "hot": true,
       "url": "https://serieson.naver.com/movie/detail.nhn?viewSeq=445793",
       "img": "https://tvstore-phinf.pstatic.net/20210618_43/1623984562415lFchH_JPEG/DISNEY_Cruella_MP_A.jpg?type=f148_202"
     },
