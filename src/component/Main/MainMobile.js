@@ -1,18 +1,14 @@
 import './MainMobile.css';
-import {fetchMovie} from "../../function/fetch";
 import sortRank from "../../function/sortRank";
 import MovieCardMobile from "../MovieCard/MovieCardMobile";
 import {useEffect, useState} from "react";
 
-function MainMobile() {
+function MainMobile({movieInfo}) {
     const [sort, setSort] = useState([])
 
     useEffect(() => {
-        fetchMovie().then(arr => {
-                setSort(sortRank(arr, "sales"));
-            }
-        )
-    }, [])
+        setSort(sortRank(movieInfo, "sales"));
+    }, [movieInfo])
 
 
     function advertise() {

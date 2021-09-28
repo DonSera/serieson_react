@@ -5,7 +5,6 @@ import Advertise from "../Advertise/Advertise";
 import SmallWindow from "../Window/SmallWindow";
 import {publish} from "../../function/PubSub";
 
-import {fetchMovie} from "../../function/fetch";
 import sortRank from "../../function/sortRank";
 import select from "../../function/select";
 
@@ -14,21 +13,16 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function MainPC() {
-    const [info, setInfo] = useState([]) // 영화정보 저장 (현재 추천에 사용)
+function MainPC({movieInfo}) {
     const [sort, setSort] = useState([]) // 영화 판매순으로 정렬 (10개)
     const [recent, setRecent] = useState([]) // 영화 최신순으로 정렬 (10개)
     const [selectEvent, setSelectEvent] = useState([]) // 영화 event 하는 것만 10개뽑기
 
     useEffect(() => {
-        fetchMovie().then(arr => {
-            setInfo(arr);
-            setSort(sortRank(arr, "sales", 10));
-            setSelectEvent(select(arr, 'event', 10));
-            setRecent(sortRank(arr, ['info', 'open'], 10));
-        })
-
-    }, [])
+        setSort(sortRank(movieInfo, "sales", 10));
+        setSelectEvent(select(movieInfo, 'event', 10));
+        setRecent(sortRank(movieInfo, ['info', 'open'], 10));
+    }, [movieInfo])
 
     const footerInfo = [
         `시리즈온에서 판매되는 콘텐츠의 저작권은 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 처벌될 수 있습니다.`,
@@ -68,7 +62,7 @@ function MainPC() {
                 <section className={`movie-suggestion`}>
                     <div className={`suggestion`}>
                         <Slider {...settings}>
-                            {info.map((obj, index) => {
+                            {movieInfo.map((obj, index) => {
                                 return (
                                     <MovieCard key={`suggestion_${obj.name}_${index}`}
                                                obj={obj} type={'slider'}/>
