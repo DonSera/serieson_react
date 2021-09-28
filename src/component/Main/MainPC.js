@@ -2,7 +2,7 @@ import './MainPC.css';
 import MovieCard from "../MovieCard/MovieCard";
 import MovieCardMobile from "../MovieCard/MovieCardMobile";
 import Advertise from "../Advertise/Advertise";
-import SmallWindow from "../Window/SmallWindow";
+import Board from "../Board/Board";
 import {publish} from "../../function/PubSub";
 
 import sortRank from "../../function/sortRank";
@@ -41,7 +41,7 @@ function MainPC({movieInfo}) {
         slidesToScroll: 5,
     };
 
-    function RenderTest() {
+    function EventLi() {
         function eventMap() {
             return event.map((text, index) =>
                 <li key={`event_text_${index}`}>{text}</li>);
@@ -84,28 +84,28 @@ function MainPC({movieInfo}) {
                                        height={'100%'}
                                        float={'right'}/>
                         </div>
-                        <div className={`windows`}>
+                        <div className={`boards`}>
                             <div className={`margin`}/>
-                            <SmallWindow windowWidth={`100%`}
-                                         height={`49%`}
-                                         headerHeight={`30px`}
-                                         headerText={'최신영화'}
-                                         url={"https://serieson.naver.com/movie/recentList.nhn"}
-                                         contents={recent.map((obj, index) => {
-                                             if (index > 9) return '';
-                                             else return <MovieCard key={`recent_${obj.name}_${index}`}
-                                                                    obj={obj} type={'info'}/>;
-                                         })}/>
+                            <Board boardWidth={`100%`}
+                                   height={`49%`}
+                                   headerHeight={`30px`}
+                                   headerText={'최신영화'}
+                                   url={"https://serieson.naver.com/movie/recentList.nhn"}
+                                   contents={recent.map((obj, index) => {
+                                       if (index > 9) return '';
+                                       else return <MovieCard key={`recent_${obj.name}_${index}`}
+                                                              obj={obj} type={'info'}/>;
+                                   })}/>
                             <div className={`margin`}/>
-                            <SmallWindow windowWidth={`100%`}
-                                         height={`49%`}
-                                         headerHeight={`30px`}
-                                         headerText={'할인 영화'}
-                                         url={"https://serieson.naver.com/movie/categoryList.nhn?categoryCode=300003"}
-                                         contents={selectEvent.map((obj, index) =>
-                                             <MovieCard key={`discount_${obj.name}_${index}`}
-                                                        obj={obj} type={'info'}/>
-                                         )}/>
+                            <Board boardWidth={`100%`}
+                                   height={`49%`}
+                                   headerHeight={`30px`}
+                                   headerText={'할인 영화'}
+                                   url={"https://serieson.naver.com/movie/categoryList.nhn?categoryCode=300003"}
+                                   contents={selectEvent.map((obj, index) =>
+                                       <MovieCard key={`discount_${obj.name}_${index}`}
+                                                  obj={obj} type={'info'}/>
+                                   )}/>
                         </div>
                     </section>
 
@@ -113,41 +113,39 @@ function MainPC({movieInfo}) {
                         <Advertise width={'100%'}
                                    height={'20%'}/>
                         <div className={`margin`}/>
-                        <SmallWindow windowWidth={'100%'}
-                                     headerHeight={'30px'}
-                                     headerText={'영화 스토어 TOP10'}
-                                     url={"https://serieson.naver.com/movie/top100List.nhn"}
-                                     contents={sort.map((obj, index) => {
-                                         if (index > 9) return '';
-                                         else return <MovieCardMobile key={`side_${obj.name}_${index}`}
-                                                                      obj={obj}
-                                                                      rank={index + 1}/>;
-                                     })}/>
+                        <Board boardWidth={'100%'}
+                               headerHeight={'30px'}
+                               headerText={'영화 스토어 TOP10'}
+                               url={"https://serieson.naver.com/movie/top100List.nhn"}
+                               contents={sort.map((obj, index) => {
+                                   if (index > 9) return '';
+                                   else return <MovieCardMobile key={`side_${obj.name}_${index}`}
+                                                                obj={obj}
+                                                                rank={index + 1}/>;
+                               })}/>
                         <div className={`margin`}/>
                         <Advertise width={'100%'} height={'8%'}/>
                     </section>
                 </section>
 
                 <section className={`app-service`}>
-                    <SmallWindow windowWidth={'35%'}
-                                 headerHeight={'20px'}
-                                 headerText={'이벤트'}
-                                 contents={<RenderTest/>}
+                    <Board boardWidth={'35%'}
+                           headerHeight={'20px'}
+                           headerText={'이벤트'}
+                           contents={<EventLi/>}
                     />
-                    <SmallWindow windowWidth={'65%'}
-                                 windowHeight={'90%'}
-                                 headerHeight={'20px'}
-                                 headerText={'서비스 이용 안내'}
-                                 contents={<div className={'sp_home_bottom_ui'}>
-                                     <div className={'service-title'}/>
-                                     <a href={'https://play.google.com/store/apps/details?id=com.nhn.android.navertv'}
-                                        id={'googlePlay'}/>
-                                     <a href={'https://apps.apple.com/kr/app/id530059576'}
-                                        id={'appleStore'}/>
-                                     <a href={'https://appdown.pstatic.net/naver/NaverMediaPlayer/setup/SeriesPlayerInst.exe'}
-                                        id={'windowsPlayer'}/>
-                                     <div className={`margin`}/>
-                                 </div>}/>
+                    <Board boardWidth={'65%'}
+                           headerHeight={'20px'}
+                           headerText={'서비스 이용 안내'}
+                           contents={<div className={'sp_home_bottom_ui'}>
+                               <div className={'service-title'}/>
+                               <a href={'https://play.google.com/store/apps/details?id=com.nhn.android.navertv'}
+                                  id={'googlePlay'}/>
+                               <a href={'https://apps.apple.com/kr/app/id530059576'}
+                                  id={'appleStore'}/>
+                               <a href={'https://appdown.pstatic.net/naver/NaverMediaPlayer/setup/SeriesPlayerInst.exe'}
+                                  id={'windowsPlayer'}/>
+                           </div>}/>
                 </section>
             </section>
         </div>

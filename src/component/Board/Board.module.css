@@ -1,9 +1,9 @@
-.window-background{
+.board-background {
     display: inline-block;
     box-sizing: border-box;
 }
 
-.window-header{
+.board-header {
     border-top: 1px solid darkgrey;
     border-left: 1px solid darkgrey;
     border-right: 1px solid darkgrey;
@@ -20,22 +20,23 @@
     align-items: center;
 }
 
-.window-main{
+.board-main {
     border-bottom: 1px solid darkgrey;
     border-left: 1px solid darkgrey;
     border-right: 1px solid darkgrey;
     border-radius: 0 0 5px 5px;
 
-    padding: 1% 0 1% 0 ;
+    padding: 1% 0 1% 0;
     box-sizing: border-box;
     background-color: white;
 }
 
-.header-text{
+.header-text {
     position: absolute;
-    left:  5px;
+    left: 5px;
 }
-.header-link{
+
+.header-link {
     position: absolute;
     right: 5px;
 }

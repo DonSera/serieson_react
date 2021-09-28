@@ -71,7 +71,7 @@
     height: 10%;
 }
 
-.windows {
+.boards {
     width: 100%;
     height: 90%;
 }
@@ -89,6 +89,7 @@
 .app-service {
     width: var(--center-width);
     height: 215px;
+    display: flex; /*자식의 높이 일치*/
     padding: var(--wrap-padding);
     background-color: lightskyblue;
 }
