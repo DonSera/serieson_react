@@ -41,15 +41,6 @@ function MainPC({movieInfo}) {
         slidesToScroll: 5,
     };
 
-    function EventLi() {
-        function eventMap() {
-            return event.map((text, index) =>
-                <li key={`event_text_${index}`}>{text}</li>);
-        }
-
-        return <div className={'event-wrap'}> {eventMap()} </div>;
-    }
-
     return (
         <div className="MainPC">
             <section id={'topBackground'}/>
@@ -87,7 +78,7 @@ function MainPC({movieInfo}) {
                         <div className={`boards`}>
                             <div className={`margin`}/>
                             <Board boardWidth={`100%`}
-                                   height={`49%`}
+                                   boardHeight={'49%'}
                                    headerHeight={`30px`}
                                    headerText={'최신영화'}
                                    url={"https://serieson.naver.com/movie/recentList.nhn"}
@@ -98,7 +89,7 @@ function MainPC({movieInfo}) {
                                    })}/>
                             <div className={`margin`}/>
                             <Board boardWidth={`100%`}
-                                   height={`49%`}
+                                   boardHeight={'49%'}
                                    headerHeight={`30px`}
                                    headerText={'할인 영화'}
                                    url={"https://serieson.naver.com/movie/categoryList.nhn?categoryCode=300003"}
@@ -132,7 +123,9 @@ function MainPC({movieInfo}) {
                     <Board boardWidth={'35%'}
                            headerHeight={'20px'}
                            headerText={'이벤트'}
-                           contents={<EventLi/>}
+                           contents={<div className={'event-wrap'}>
+                               {event.map((text, index) =>
+                                   <li key={`event_text_${index}`}>{text}</li>)} </div>}
                     />
                     <Board boardWidth={'65%'}
                            headerHeight={'20px'}

@@ -1,3 +1,8 @@
+span {
+    vertical-align: middle;
+    margin: 0 1px 0 1px;
+}
+
 .ico_mv_lst6 {
     background-image: url("https://ssl.pstatic.net/static/nstore/series_on/ico_mv_lst6.png");
     display: inline-block;
@@ -10,6 +15,7 @@
     width: 23px;
     height: 16px;
 }
+
 
 #subTitle {
     width: 29px;
@@ -30,14 +36,14 @@
     background-position: -35px 0;
 }
 
-.sp_home_new_v7{
+.sp_home_new_v7 {
     background-image: url("https://ssl.pstatic.net/static/nstore/series_on/sp_home_new_v7.png");
     display: inline-block;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
-.circle{
+.circle {
     position: absolute;
     display: flex;
     width: 51px;
@@ -47,27 +53,27 @@
     left: 0;
 }
 
-#rank{
+#rank {
     width: 15px;
     height: 16px;
 }
 
-#event{
+#event {
     background-position: -252px 0;
 }
 
-#hot{
+#hot {
     background-position: -139px 0;
 }
 
-#new{
+#new {
     background-position: -307px 0;
 }
 
-#free{
+#free {
     background-position: -195px 0;
 }
 
-.zoom-out{
+.zoom-out {
     zoom: 0.8;
 }

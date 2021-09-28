@@ -42,7 +42,7 @@ function Header({headerObj, type = 'PC'}) {
 
     function setDetailText(index) {
         if (Object.keys(headerObj).length) {
-            setDetail(getName(headerObj['headerList'][index]['detailList'], 'detail'))
+            setDetail(getName(headerObj.headerList[index].detailList, 'detail'))
         }
     }
 

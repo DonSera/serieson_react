@@ -18,7 +18,7 @@ export function Youth() {
     return <span id={styles['youth']} className={styles['spr_adult_ico_v2']}/>;
 }
 
-export function Circle({name, size}){
+export function Circle({name, size}) {
     if (size > 45) {
         return <span id={styles[name]} className={`${styles['sp_home_new_v7']} ${styles['circle']}`}/>
     } else {
