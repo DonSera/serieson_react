@@ -60,7 +60,7 @@
     },
     {
       "headerName" :"장르소설,만화 >",
-      "detailList" : []
+      "detailList" : [{}]
     }
   ]
 }

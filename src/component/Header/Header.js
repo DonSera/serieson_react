@@ -1,9 +1,10 @@
 import styles from './Header.module.css'
 import {getName} from "../../function/getHeader";
 import {useEffect, useState} from "react";
+import {publish, subscribe} from "../../function/PubSub";
 
 function Header({headerObj, type = 'PC'}) {
-    const [trueIndex, setTrueIndex] = useState([0,0])
+    const [trueIndex, setTrueIndex] = useState([0, 0])
     const [listMo, setListMo] = useState([])
     const [listInner, setListInner] = useState([])
 
@@ -11,24 +12,23 @@ function Header({headerObj, type = 'PC'}) {
     const [colorD, setColorD] = useState([])
 
     useEffect(() => {
-        console.log('obj')
-        console.dir(headerObj)
-
         if (Object.keys(headerObj).length) {
             const headerText = getName(headerObj['headerList'], 'header')
             setListMo(headerText)
             setListInner(getName(headerObj['headerList'][0]['detailList'], 'detail'))
         }
-        setBooleanInit()
+        subscribe('synchronization', setTrueIndex)
+        // setBooleanInit()
     }, [headerObj])
 
     useEffect(() => {
         setBooleanInit()
-    }, [listInner])
+        console.log('use effect')
+    }, [listInner, trueIndex])
 
 
-    function setBooleanInit(){
-        if(listMo.length && listInner.length){
+    function setBooleanInit() {
+        if (listMo.length && listInner.length) {
             const moArray = Array(listMo.length).fill(false)
             moArray[trueIndex[0]] = true;
             setColorH(moArray)
@@ -44,13 +44,16 @@ function Header({headerObj, type = 'PC'}) {
         if (fuc === "H") {
             copy[0] = index
             copy[1] = 0
-            setTrueIndex(copy)
+            // setTrueIndex(copy)
+            publish('synchronization', copy)
             setListInner(getName(headerObj['headerList'][index]['detailList'], 'detail'))
         } else if (fuc === "D") {
             copy[1] = index
-            setTrueIndex(copy)
-            setBooleanInit()
+            // setTrueIndex(copy)
+            publish('synchronization', copy)
+            // setBooleanInit()
         }
+        console.log('check publish true index '+ trueIndex)
     }
 
     function render() {
@@ -69,8 +72,8 @@ function Header({headerObj, type = 'PC'}) {
                         <ul>
                             {
                                 listMo.map((text, index) => <li key={`header_text_${index}`}
-                                                                    style={{backgroundColor: colorH[index] ? "green" : ""}}
-                                                                    onClick={() => onChange(index, "H")}>{text}</li>)
+                                                                style={{backgroundColor: colorH[index] ? "green" : ""}}
+                                                                onClick={() => onChange(index, "H")}>{text}</li>)
                             }
                             <span>
                         <span>My</span>
@@ -85,8 +88,8 @@ function Header({headerObj, type = 'PC'}) {
                         <ul>
                             {
                                 listInner.map((text, index) => <li key={`detail_text_${index}`}
-                                                                      style={{color: colorD[index] ? "green" : ""}}
-                                                                      onClick={() => onChange(index, "D")}>{text}</li>)
+                                                                   style={{color: colorD[index] ? "green" : ""}}
+                                                                   onClick={() => onChange(index, "D")}>{text}</li>)
                             }
                         </ul>
                     </div>
@@ -109,8 +112,8 @@ function Header({headerObj, type = 'PC'}) {
                         <ul>
                             {
                                 listMo.map((text, index) => <li key={`header_text_${index}`}
-                                                                    style={{backgroundColor: colorH[index] ? "green" : ""}}
-                                                                    onClick={() => onChange(index, "H")}>{text}</li>)
+                                                                style={{backgroundColor: colorH[index] ? "green" : ""}}
+                                                                onClick={() => onChange(index, "H")}>{text}</li>)
                             }
                             <span>
                         <span>My</span>
@@ -125,8 +128,8 @@ function Header({headerObj, type = 'PC'}) {
                         <ul>
                             {
                                 listInner.map((text, index) => <li key={`detail_text_${index}`}
-                                                                      style={{color: colorD[index] ? "green" : ""}}
-                                                                      onClick={() => onChange(index, "D")}>{text}</li>)
+                                                                   style={{color: colorD[index] ? "green" : ""}}
+                                                                   onClick={() => onChange(index, "D")}>{text}</li>)
                             }
                         </ul>
                     </div>

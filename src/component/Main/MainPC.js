@@ -4,6 +4,7 @@ import MovieCardMobile from "../MovieCard/MovieCardMobile";
 import Advertise from "../Advertise/Advertise";
 import SmallWindow from "../Window/SmallWindow";
 import Header from "../Header/Header";
+import {publish} from "../../function/PubSub";
 
 import {fetchHeader, fetchMovie} from "../../function/fetch";
 import sortRank from "../../function/sortRank";
@@ -73,7 +74,6 @@ function MainPC() {
                 <Header headerObj={header}/>
             </section>
 
-
             <div className={`main`}>
                 <section className={`movie-suggestion`}>
                     <div className={`suggestion`}>
@@ -102,6 +102,9 @@ function MainPC() {
                                        float={'right'}/>
                         </div>
                         <div className={`windows`}>
+                            <div>
+                                <button type={'button'} onClick={() => publish('synchronization', [0, 0])}>클릭</button>
+                            </div>
                             <div className={`margin`}/>
                             <SmallWindow windowWidth={`100%`}
                                          height={`49%`}
