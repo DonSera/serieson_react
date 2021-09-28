@@ -7,7 +7,6 @@ export function publish(eventName, data) {
         console.log('noting do')
         return
     }
-    console.log('publish data ' + data)
     pubSubArray[eventName].forEach(func => {
         func(data)
     })
@@ -20,5 +19,4 @@ export function subscribe(eventName, func) {
         pubSubArray[eventName] = []
     }
     pubSubArray[eventName].push(func)
-    // console.log('subscribe -ing')
 }

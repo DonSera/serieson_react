@@ -87,6 +87,9 @@ function MainPC() {
                         </Slider>
                     </div>
                     <div style={{position: 'absolute', bottom: 5, right: 5}}>추천하기</div>
+                    <button type={'button'} onClick={() =>
+                        publish('set-header-true-index', [0, 0])}>클릭
+                    </button>
                 </section>
 
                 <section className={`movie-info`}>
@@ -102,9 +105,6 @@ function MainPC() {
                                        float={'right'}/>
                         </div>
                         <div className={`windows`}>
-                            <div>
-                                <button type={'button'} onClick={() => publish('synchronization', [0, 0])}>클릭</button>
-                            </div>
                             <div className={`margin`}/>
                             <SmallWindow windowWidth={`100%`}
                                          height={`49%`}

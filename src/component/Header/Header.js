@@ -1,7 +1,7 @@
 import styles from './Header.module.css'
 import {getName} from "../../function/getHeader";
 import {useEffect, useState} from "react";
-import {publish, subscribe} from "../../function/PubSub";
+import {subscribe} from "../../function/PubSub";
 
 function Header({headerObj, type = 'PC'}) {
     const [trueIndex, setTrueIndex] = useState([0, 0])
@@ -12,20 +12,21 @@ function Header({headerObj, type = 'PC'}) {
     const [colorD, setColorD] = useState([])
 
     useEffect(() => {
-        if (Object.keys(headerObj).length) {
-            const headerText = getName(headerObj['headerList'], 'header')
-            setListMo(headerText)
-            setListInner(getName(headerObj['headerList'][0]['detailList'], 'detail'))
-        }
-        subscribe('synchronization', setTrueIndex)
-        // setBooleanInit()
-    }, [headerObj])
+        setDetailText(trueIndex[0])
+    }, [trueIndex])
 
     useEffect(() => {
         setBooleanInit()
-        console.log('use effect')
-    }, [listInner, trueIndex])
+    }, [listMo, listInner])
 
+    useEffect(() => {
+        if (Object.keys(headerObj).length) {
+            const headerText = getName(headerObj['headerList'], 'header')
+            setListMo(headerText)
+            setDetailText(0)
+        }
+        subscribe('set-header-true-index', setTrueIndex)
+    }, [headerObj])
 
     function setBooleanInit() {
         if (listMo.length && listInner.length) {
@@ -39,21 +40,21 @@ function Header({headerObj, type = 'PC'}) {
         }
     }
 
+    function setDetailText(index) {
+        if (Object.keys(headerObj).length) {
+            setListInner(getName(headerObj['headerList'][index]['detailList'], 'detail'))
+        }
+    }
+
     function onChange(index, fuc) {
-        const copy = trueIndex;
+        const copy = trueIndex.slice();
         if (fuc === "H") {
             copy[0] = index
             copy[1] = 0
-            // setTrueIndex(copy)
-            publish('synchronization', copy)
-            setListInner(getName(headerObj['headerList'][index]['detailList'], 'detail'))
         } else if (fuc === "D") {
             copy[1] = index
-            // setTrueIndex(copy)
-            publish('synchronization', copy)
-            // setBooleanInit()
         }
-        console.log('check publish true index '+ trueIndex)
+        setTrueIndex(copy)
     }
 
     function render() {
