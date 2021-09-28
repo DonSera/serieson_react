@@ -1,11 +1,5 @@
-:root {
-    --center-width: 1000px;
-    --wrap-padding: 10px;
-}
-
-.App {
+.MainPC {
     text-align: center; /*아래 가운데 정렬*/
-    background-color: #f5f5f5;
 }
 
 #topBackground {
@@ -112,18 +106,6 @@
 
 .event-wrap > li {
     padding: 5px 0 5px 0;
-}
-
-
-/*아래*/
-.footer {
-    width: var(--center-width);
-    height: 310px;
-    padding: var(--wrap-padding);
-}
-
-.footer-info {
-    margin: auto;
 }
 
 .sp_home_bottom_ui > * {

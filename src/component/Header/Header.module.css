@@ -1,16 +1,14 @@
-:root {
-    --center-width: 1040px;
-}
-
 #headerWarp {
     width: 100%;
-    text-align: center; /*아래 가운데 정렬*/
+    text-align: center;
+    background-color: white;
 }
 
 @media (max-width: 500px) {
     #headerWarp {
         width: 500px;
         text-align: center;
+        background-color: white;
     }
 }
 
@@ -44,17 +42,14 @@ li:hover, ul > span > span:hover {
 #logo {
     display: inline-flex;
     margin: 4px 0 4px 0;
-
     font-weight: bold;
     justify-content: space-between;
     font-size: 2em;
 }
-
 .width-change {
     width: var(--center-width);
 
 }
-
 #category {
     margin: 0;
     padding: 0;
@@ -75,9 +70,12 @@ li:hover, ul > span > span:hover {
     display: inline-block;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1039px) {
     #logo{
+        display: inline-flex;
+        margin: 4px 0 4px 0;
         font-size: 1.2em;
+        justify-content: space-between;
     }
     #category li {
         padding: 10px 15px 10px 15px;
@@ -90,7 +88,6 @@ li:hover, ul > span > span:hover {
     #detail ul{
         justify-content: space-evenly;
     }
-
     .width-change{
         width: 100%;
         min-width: 92px;

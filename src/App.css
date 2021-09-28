@@ -1,0 +1,9 @@
+:root {
+    --center-width: 1040px;
+    --wrap-padding: 10px;
+}
+
+
+#App{
+    background-color: #f5f5f5;
+}
