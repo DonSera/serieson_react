@@ -3,10 +3,9 @@ import MovieCard from "../MovieCard/MovieCard";
 import MovieCardMobile from "../MovieCard/MovieCardMobile";
 import Advertise from "../Advertise/Advertise";
 import SmallWindow from "../Window/SmallWindow";
-import Header from "../Header/Header";
 import {publish} from "../../function/PubSub";
 
-import {fetchHeader, fetchMovie} from "../../function/fetch";
+import {fetchMovie} from "../../function/fetch";
 import sortRank from "../../function/sortRank";
 import select from "../../function/select";
 
@@ -16,11 +15,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function MainPC() {
-    const [header, setHeader] = useState({})
-    const [info, setInfo] = useState([])
-    const [sort, setSort] = useState([])
-    const [recent, setRecent] = useState([])
-    const [selectEvent, setSelectEvent] = useState([])
+    const [info, setInfo] = useState([]) // 영화정보 저장 (현재 추천에 사용)
+    const [sort, setSort] = useState([]) // 영화 판매순으로 정렬 (10개)
+    const [recent, setRecent] = useState([]) // 영화 최신순으로 정렬 (10개)
+    const [selectEvent, setSelectEvent] = useState([]) // 영화 event 하는 것만 10개뽑기
 
     useEffect(() => {
         fetchMovie().then(arr => {
@@ -28,10 +26,6 @@ function MainPC() {
             setSort(sortRank(arr, "sales", 10));
             setSelectEvent(select(arr, 'event', 10));
             setRecent(sortRank(arr, ['info', 'open'], 10));
-        })
-
-        fetchHeader().then(obj => {
-            setHeader(obj)
         })
 
     }, [])
@@ -42,6 +36,13 @@ function MainPC() {
         `주소 경기도 성남시 분당구 분당내곡로 117, 9층 (백현동, 크래프톤 타워) 고객센터 1588-3820 이메일 ccnaver@naver.com`,
         `© NAVER WEBTOON Limited`
     ]
+    const event = [
+        '이벤트 첫번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
+        '이벤트 두번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
+        '이벤트 세번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
+        '이벤트 네번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
+        '이벤트 다섯번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용'
+    ]
 
     const settings = {
         dots: true,
@@ -51,17 +52,10 @@ function MainPC() {
         slidesToScroll: 5,
     };
 
-    const event = [
-        '이벤트 첫번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
-        '이벤트 두번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
-        '이벤트 세번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
-        '이벤트 네번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용',
-        '이벤트 다섯번째 줄. 말을 적는다. 한줄이 넘어가길 바라며. 넘었다용'
-    ]
-
     function RenderTest() {
         function eventMap() {
-            return event.map((text, index) => <li key={`event_text_${index}`}>{text}</li>);
+            return event.map((text, index) =>
+                <li key={`event_text_${index}`}>{text}</li>);
         }
 
         return <div className={'event-wrap'}> {eventMap()} </div>;
@@ -70,10 +64,6 @@ function MainPC() {
     return (
         <div className="App">
             <section id={'topBackground'}/>
-            <section className={`header`}>
-                <Header headerObj={header}/>
-            </section>
-
             <div className={`main`}>
                 <section className={`movie-suggestion`}>
                     <div className={`suggestion`}>
