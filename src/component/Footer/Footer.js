@@ -1,4 +1,5 @@
 import styles from './Footer.module.css'
+
 function Footer() {
     const footerInfo = [
         `시리즈온에서 판매되는 콘텐츠의 저작권은 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 처벌될 수 있습니다.`,
@@ -7,7 +8,7 @@ function Footer() {
         `© NAVER WEBTOON Limited`
     ]
 
-    return(
+    return (
         <div id={styles[`footerWrap`]}>
             {footerInfo.map((text, index) => <div key={`footer_info_${index}`}>{text}</div>)}
         </div>

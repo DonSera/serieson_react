@@ -46,49 +46,57 @@ li:hover, ul > span > span:hover {
     justify-content: space-between;
     font-size: 2em;
 }
+
 .width-change {
     width: var(--center-width);
 
 }
+
 #category {
     margin: 0;
     padding: 0;
     display: inline-block;
 }
+
 #category li {
     padding: 20px;
     font-weight: bold;
     font-size: 1.2em;
 }
+
 #detail li {
     padding: 0 10px 0 10px;
     font-size: 1em;
 }
 
-#detail{
+#detail {
     margin: 5px 0 5px 0;
     display: inline-block;
 }
 
 @media (max-width: 1039px) {
-    #logo{
+    #logo {
         display: inline-flex;
         margin: 4px 0 4px 0;
         font-size: 1.2em;
         justify-content: space-between;
     }
+
     #category li {
         padding: 10px 15px 10px 15px;
         font-size: 1em;
     }
+
     #detail li {
         padding: 5px 0 5px 0;
         font-size: 0.8em;
     }
-    #detail ul{
+
+    #detail ul {
         justify-content: space-evenly;
     }
-    .width-change{
+
+    .width-change {
         width: 100%;
         min-width: 92px;
     }
