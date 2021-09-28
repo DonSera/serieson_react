@@ -1,19 +1,66 @@
 {
-  "영화": {
-    "영화홈": "/",
-    "카테고리": "",
-    "인기순위 TOP 100":  "",
-    "이벤트":  "",
-    "무료":  "",
-    "천원관":  "",
-    "구매혜택": ""
-  },
-  "방송": {
-    "방송홈": "",
-    "카테고리" : "",
-    "인기순위 TOP 100": "",
-    "이벤트" : "",
-    "구매혜택" : ""
-  },
-  "장르소설,만화 >" : {}
+  "headerList": [
+    {
+      "headerName": "영화",
+      "detailList": [
+        {
+          "detailName": "영화홈",
+          "url": ""
+        },
+        {
+          "detailName": "카테고리",
+          "url": ""
+        },
+        {
+          "detailName": "인기순위 TOP10",
+          "url": ""
+        },
+        {
+          "detailName": "이벤트",
+          "url": ""
+        },
+        {
+          "detailName": "무료",
+          "url": ""
+        },
+        {
+          "detailName": "천원관",
+          "url": ""
+        },
+        {
+          "detailName": "구매혜택",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "headerName": "방송",
+      "detailList": [
+        {
+          "detailName": "방송홈",
+          "url": ""
+        },
+        {
+          "detailName": "카테고리",
+          "url": ""
+        },
+        {
+          "detailName": "인기순위 TOP100",
+          "url": ""
+        },
+        {
+          "detailName": "이벤트",
+          "url": ""
+        },
+        {
+          "detailName": "구매혜택",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "headerName" :"장르소설,만화 >",
+      "detailList" : []
+    }
+  ]
 }

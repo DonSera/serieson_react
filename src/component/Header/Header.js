@@ -1,10 +1,11 @@
 import styles from './Header.module.css'
-import {getDetail, getHeaderKeys} from "../../function/getHeader";
+import {getName} from "../../function/getHeader";
 import {useEffect, useState} from "react";
 
 function Header({headerObj, type = 'PC'}) {
-    const [headerKeys, setHeaderKeys] = useState([])
-    const [headerDetail, setDetail] = useState([])
+    const [trueIndex, setTrueIndex] = useState([0,0])
+    const [listMo, setListMo] = useState([])
+    const [listInner, setListInner] = useState([])
 
     const [colorH, setColorH] = useState([])
     const [colorD, setColorD] = useState([])
@@ -14,51 +15,41 @@ function Header({headerObj, type = 'PC'}) {
         console.dir(headerObj)
 
         if (Object.keys(headerObj).length) {
-            setHeaderKeys(getHeaderKeys(headerObj));
-            setDetail(getDetail(headerObj, getHeaderKeys(headerObj)[0]))
+            const headerText = getName(headerObj['headerList'], 'header')
+            setListMo(headerText)
+            setListInner(getName(headerObj['headerList'][0]['detailList'], 'detail'))
         }
-
-        getHeaderKey()
-        getDetailKey()
+        setBooleanInit()
     }, [headerObj])
 
     useEffect(() => {
-        getHeaderKey()
-    }, [headerKeys])
+        setBooleanInit()
+    }, [listInner])
 
-    useEffect(() => {
-        getDetailKey()
-    }, [headerDetail])
 
-    function getHeaderKey() {
-        if (headerKeys.length) {
-            const newArray = Array(1).fill(true)
-            const newArray1 = newArray.concat(Array(headerKeys.length - 1).fill(false))
-            setColorH(newArray1)
+    function setBooleanInit(){
+        if(listMo.length && listInner.length){
+            const moArray = Array(listMo.length).fill(false)
+            moArray[trueIndex[0]] = true;
+            setColorH(moArray)
+
+            const innerArray = Array(listInner.length).fill(false)
+            innerArray[trueIndex[1]] = true;
+            setColorD(innerArray)
         }
     }
-
-    function getDetailKey() {
-        if (headerDetail.length) {
-            const newArray = Array(1).fill(true)
-            const newArray2 = newArray.concat(Array(headerDetail.length - 1).fill(false))
-            setColorD(newArray2)
-        }
-    }
-
 
     function onChange(index, fuc) {
+        const copy = trueIndex;
         if (fuc === "H") {
-            const newColorArray = Array(headerKeys.length).fill(false);
-            newColorArray[index] = true;
-            setColorH(newColorArray)
-
-            setDetail(getDetail(headerObj, headerKeys[index]))
-
+            copy[0] = index
+            copy[1] = 0
+            setTrueIndex(copy)
+            setListInner(getName(headerObj['headerList'][index]['detailList'], 'detail'))
         } else if (fuc === "D") {
-            const newColorArray = Array(headerDetail.length).fill(false);
-            newColorArray[index] = true;
-            setColorD(newColorArray)
+            copy[1] = index
+            setTrueIndex(copy)
+            setBooleanInit()
         }
     }
 
@@ -77,7 +68,7 @@ function Header({headerObj, type = 'PC'}) {
                     <div id={styles['category']} className={styles['pc']}>
                         <ul>
                             {
-                                headerKeys.map((text, index) => <li key={`header_text_${index}`}
+                                listMo.map((text, index) => <li key={`header_text_${index}`}
                                                                     style={{backgroundColor: colorH[index] ? "green" : ""}}
                                                                     onClick={() => onChange(index, "H")}>{text}</li>)
                             }
@@ -93,7 +84,7 @@ function Header({headerObj, type = 'PC'}) {
                     <div id={styles['detail']} className={styles['pc']}>
                         <ul>
                             {
-                                headerDetail.map((text, index) => <li key={`detail_text_${index}`}
+                                listInner.map((text, index) => <li key={`detail_text_${index}`}
                                                                       style={{color: colorD[index] ? "green" : ""}}
                                                                       onClick={() => onChange(index, "D")}>{text}</li>)
                             }
@@ -117,7 +108,7 @@ function Header({headerObj, type = 'PC'}) {
                     <div id={styles['category']} className={styles['mobile']}>
                         <ul>
                             {
-                                headerKeys.map((text, index) => <li key={`header_text_${index}`}
+                                listMo.map((text, index) => <li key={`header_text_${index}`}
                                                                     style={{backgroundColor: colorH[index] ? "green" : ""}}
                                                                     onClick={() => onChange(index, "H")}>{text}</li>)
                             }
@@ -133,7 +124,7 @@ function Header({headerObj, type = 'PC'}) {
                     <div id={styles['detail']} className={styles['mobile']}>
                         <ul>
                             {
-                                headerDetail.map((text, index) => <li key={`detail_text_${index}`}
+                                listInner.map((text, index) => <li key={`detail_text_${index}`}
                                                                       style={{color: colorD[index] ? "green" : ""}}
                                                                       onClick={() => onChange(index, "D")}>{text}</li>)
                             }
