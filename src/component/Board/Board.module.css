@@ -26,12 +26,18 @@
     border-right: 1px solid darkgrey;
     border-radius: 0 0 5px 5px;
 
-    padding: 1% 0 1% 0;
     box-sizing: border-box;
     background-color: white;
 
     /*옆의 높이와 일치 시키기 위해서*/
     flex: 1 1 auto;
+}
+
+.contents-center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .header-text {

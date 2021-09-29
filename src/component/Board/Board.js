@@ -2,7 +2,13 @@ import styles from './Board.module.css'
 
 function Board({boardWidth, boardHeight = 0, headerHeight, headerText, contents, url}) {
     function renderContent() {
-        return <div className={styles['board-main']}>{contents}</div>;
+        if (boardHeight) {
+            return <div className={styles['board-main']}>
+                <div className={styles['contents-center']}>{contents}</div>
+            </div>;
+        } else {
+            return <div className={styles['board-main']}>{contents}</div>;
+        }
     }
 
     function renderHeader() {
