@@ -1,0 +1,35 @@
+.play-icon {
+    overflow: hidden;
+    background-image: url(https://ssl.pstatic.net/static/nstore/series_on/sp_home_bottom_ui_v2.png);
+    background-repeat: no-repeat;
+}
+
+
+a.play-icon {
+    display: inline-block;
+    width: 150px;
+    height: 46px;
+    margin: 0 5px 0 5px;
+    background-size: 254px 220px;
+    background-color: white;
+}
+
+#googlePlay {
+    background-position: 0 -80px;
+}
+
+#appleStore {
+    background-position: 0 -127px;
+}
+
+#windowsPlayer {
+    background-position: 0 -174px;
+}
+
+#IconTitle {
+    width: 254px;
+    height: 35px;
+    margin: 31px auto 31px;
+    background-position: 0 -35px;
+    background-size: 254px 220px;
+}

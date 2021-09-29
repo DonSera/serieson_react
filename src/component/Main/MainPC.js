@@ -12,6 +12,7 @@ import {useEffect, useState} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {AppleStore, GooglePlay, IconTitle, WindowsPlayer} from "../Icon/storeIcon";
 
 function MainPC({movieInfo}) {
     const [sort, setSort] = useState([]) // 영화 판매순으로 정렬 (10개)
@@ -130,15 +131,12 @@ function MainPC({movieInfo}) {
                     <Board boardWidth={'65%'}
                            headerHeight={'20px'}
                            headerText={'서비스 이용 안내'}
-                           contents={<div className={'sp_home_bottom_ui'}>
-                               <div className={'service-title'}/>
-                               <a href={'https://play.google.com/store/apps/details?id=com.nhn.android.navertv'}
-                                  id={'googlePlay'}/>
-                               <a href={'https://apps.apple.com/kr/app/id530059576'}
-                                  id={'appleStore'}/>
-                               <a href={'https://appdown.pstatic.net/naver/NaverMediaPlayer/setup/SeriesPlayerInst.exe'}
-                                  id={'windowsPlayer'}/>
-                           </div>}/>
+                           contents={<section>
+                               <IconTitle/>
+                               <GooglePlay/>
+                               <AppleStore/>
+                               <WindowsPlayer/>
+                           </section>}/>
                 </section>
             </section>
         </div>
