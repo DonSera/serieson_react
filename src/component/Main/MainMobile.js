@@ -33,6 +33,7 @@ function MainMobile({movieInfo}) {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        centerMode: true,
     };
     const settingsTwo = {
         arrows: false,
@@ -42,6 +43,7 @@ function MainMobile({movieInfo}) {
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
+        centerMode: true,
     };
 
 
