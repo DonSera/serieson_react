@@ -92,20 +92,29 @@ function MainMobile({movieInfo}) {
         )
     }
 
+    function getMovieCardIndex(start, end) {
+        const array = [];
+        if (sort.length) {
+            for (let index = start; index < (end || sort.length); index++) {
+                const obj = sort[index]
+                array.push(<MovieCardMobile key={`side_${obj.name}_${index}`} obj={obj}/>)
+            }
+        }
+        return array
+    }
+
     return <div>
         {advertiseTop()}
-        {sort.map((obj, index) => {
-            if (index === 4) {
-                return (
-                    <>
-                        {one && advertise('one')}
-                        {two && advertise('two')}
-                        <MovieCardMobile key={`side_${obj.name}_${index}`} obj={obj}/>
-                    </>
-                )
-            }
-            return <MovieCardMobile key={`side_${obj.name}_${index}`} obj={obj}/>
-        })}
+        <section>
+            {getMovieCardIndex(0, 4).map(tag => tag)}
+        </section>
+        <>
+            {one && advertise('one')}
+            {two && advertise('two')}
+        </>
+        <section>
+            {getMovieCardIndex(3, 0).map(tag => tag)}
+        </section>
     </div>;
 }
 

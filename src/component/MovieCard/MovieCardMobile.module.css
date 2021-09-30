@@ -1,4 +1,4 @@
-.movie-card{
+.movie-card {
     width: 96%;
     height: 8%;
     margin: 1%;
@@ -7,44 +7,52 @@
     display: flex;
     position: relative;
     align-items: center;
-    border-top: 1px solid darkgrey;
+    border-bottom: 1px solid darkgrey;
     font-size: 0.8em;
 }
 
-.movie-card:first-child{
+.movie-card:last-child {
     border: none;
 }
 
-.card-mobile{
+.card-mobile {
     max-height: 109px;
 }
 
+.card-mobile:first-child {
+    border-top: 1px solid darkgrey;
+}
 
-a{
+.card-mobile:last-child {
+    border-bottom: 1px solid darkgrey;
+}
+
+a {
     text-decoration-line: none;
     color: black;
 
 }
-a:hover{
+
+a:hover {
     text-decoration-line: underline;
     color: darkblue;
 }
 
-.img{
+.img {
     margin: 0 5% 0 5%;
     width: 15%;
     height: 85%;
     align-items: center;
 }
 
-.mobile-img{
+.mobile-img {
     min-width: 80px;
     min-height: 100px;
     max-width: 80px;
     max-height: 109px;
 }
 
-.info{
+.info {
     width: 70%;
 
     text-align: left;

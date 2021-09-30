@@ -43,14 +43,14 @@ function MovieCarMobile({obj, rank = 0}) {
     function render() {
         if (rank) {
             return (
-                    <a className={`${styles[`movie-card`]}`} href={obj['url']}>
-                        <img className={`${styles[`img`]}`} alt={`영화 이미지`} src={obj.img}/>
-                        <span className={styles[`info`]}>
-                            <Rank num={rank}/>
-                                {title()}
-                                {actorNames()}
-                        </span>
-                    </a>
+                <a className={`${styles[`movie-card`]}`} href={obj['url']}>
+                    <img className={`${styles[`img`]}`} alt={`영화 이미지`} src={obj.img}/>
+                    <span className={styles[`info`]}>
+                        <Rank num={rank}/>
+                        {title()}
+                        {actorNames()}
+                    </span>
+                </a>
             );
         } else {
             return (
