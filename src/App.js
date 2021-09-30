@@ -21,12 +21,11 @@ function App() {
     });
 
     useEffect(() => {
-        fetchHeader().then(obj => {
-            setHeader(obj)
-        })
-        fetchMovie().then(arr => {
+        Promise.all([fetchHeader(), fetchMovie()]).then(([obj, arr]) => {
+            setHeader(obj);
             setInfo(arr);
-        })
+        });
+        // 로딩 만들기
     }, [])
 
     return (
