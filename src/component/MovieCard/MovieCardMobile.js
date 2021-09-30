@@ -7,8 +7,8 @@ function MovieCarMobile({obj, rank = 0}) {
     function title() {
         return (
             <>
-                {obj["subTitle"] ? <SubTitle/> : <></>}
-                {obj["info"]["age"] < 19 ? <></> : <Youth/>}
+                {obj["subTitle"] && <SubTitle/>}
+                {obj["info"]["age"] > 18 && <Youth/>}
                 <span className={styles['main-title']}>{obj["mainTitle"]}</span>
             </>
         )

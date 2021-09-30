@@ -72,7 +72,7 @@ function Header({headerObj, type = 'PC'}) {
                     <ul>
                         {
                             category.map((text, index) => <li key={`header_text_${index}`}
-                                                              style={{backgroundColor: colorH[index] ? "green" : ""}}
+                                                              style={{backgroundColor: colorH[index] && "green"}}
                                                               onClick={() => onChange(index, "H")}>{text}</li>)
                         }
                         <span>
@@ -88,7 +88,7 @@ function Header({headerObj, type = 'PC'}) {
                     <ul>
                         {
                             detail.map((text, index) => <li key={`detail_text_${index}`}
-                                                            style={{color: colorD[index] ? "green" : ""}}
+                                                            style={{color: colorD[index] && "green"}}
                                                             onClick={() => onChange(index, "D")}>{text}</li>)
                         }
                     </ul>

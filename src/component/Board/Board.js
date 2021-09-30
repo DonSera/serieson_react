@@ -14,7 +14,7 @@ function Board({boardWidth, boardHeight = 0, headerHeight, headerText, contents,
     function renderHeader() {
         return <div className={styles['board-header']} style={{height: headerHeight}}>
             <span className={styles['header-text']}>{headerText}</span>
-            {url ? <a className={styles['header-link']} href={url}>더보기 ></a> : ''}
+            {url && <a className={styles['header-link']} href={url}>더보기 ></a>}
         </div>
     }
 
