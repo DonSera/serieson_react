@@ -28,7 +28,6 @@
 a {
     text-decoration-line: none;
     color: black;
-
 }
 
 a:hover {
@@ -51,8 +50,7 @@ a:hover {
 }
 
 .info {
-    /*width: 70%;*/
-
+    width: 70%;
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -63,4 +61,11 @@ a:hover {
     font: caption;
     font-size: 1em;
     font-weight: bold;
+}
+
+.actor-names{
+    margin: 5px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

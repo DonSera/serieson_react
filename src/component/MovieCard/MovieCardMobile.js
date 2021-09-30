@@ -16,7 +16,7 @@ function MovieCarMobile({obj, rank = 0}) {
 
     function actorNames() {
         return (
-            <section>
+            <section className={styles['actor-names']}>
                 <span>{obj['info']['actors'].join(', ')}</span>
             </section>
         )
