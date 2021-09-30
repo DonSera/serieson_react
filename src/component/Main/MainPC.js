@@ -126,7 +126,8 @@ function MainPC({movieInfo}) {
                            headerText={'이벤트'}
                            contents={<div className={'event-wrap'}>
                                {event.map((text, index) =>
-                                   <li key={`event_text_${index}`}>{text}</li>)} </div>}
+                                   <li key={`event_text_${index}`}>{text}</li>)}
+                           </div>}
                     />
                     <Board boardWidth={'65%'}
                            headerHeight={'20px'}

@@ -87,22 +87,21 @@
 
 /*이벤트*/
 .app-service {
-    width: var(--center-width);
-    height: 215px;
-    padding: var(--wrap-padding);
-    background-color: lightskyblue;
-
     display: flex; /*자식의 높이 일치*/
+    width: var(--center-width);
+    height: auto;
+    padding: var(--wrap-padding);
 }
 
 .event-wrap {
     display: inline-block;
-    padding: 10px 0 10px 0;
+    justify-content: center;
     width: 80%;
+    padding: 31px 0 31px 0;
 
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    /*text-overflow: ellipsis;*/
+    white-space: pre;
     font-size: 1em;
 }
 
