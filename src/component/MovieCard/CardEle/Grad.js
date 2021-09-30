@@ -9,10 +9,11 @@ function Grad({obj, size}) {
                          : size === 'small' && {zoom: 0.8}}>
                 <Star bolColor={false}/>
                 <Star bolColor={true} percent={obj['grad']}/>
-                <span className={styles['grad-num']}>
+                <span className={styles['grad-num']}
+                      style={size === 'big' ? {fontSize: '1em'}
+                          : size === 'small' && {fontSize: '1.4em'}}>
                 {obj['grad'] % 1 ? obj['grad'] : `${obj['grad']}.0`}
                 </span>
-
             </section>
         </div>
     )
