@@ -54,7 +54,7 @@ function MovieCarMobile({obj, rank = 0}) {
             );
         } else {
             return (
-                <a className={`${styles[`movie-card`]} ${styles['card-mobile']}`} href={obj['url']}>
+                <a className={`${styles[`movie-card`]} ${styles['mobile-card']}`} href={obj['url']}>
                     <EventCircle obj={obj} size={40}/>
                     <img className={`${styles[`img`]}  ${styles[`mobile-img`]}`} alt={`영화 이미지`} src={obj.img}/>
                     <span className={styles[`info`]}>
