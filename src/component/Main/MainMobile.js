@@ -26,12 +26,13 @@ function MainMobile({movieInfo}) {
     });
 
     const settings = {
+        className: 'mobile',
         arrows: false,
-        dots: false,
+        dots: true,
         speed: 500,
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 1
     };
 
 
@@ -55,34 +56,35 @@ function MainMobile({movieInfo}) {
     }
 
     function advertise(getAdNum) {
+        settings.dots = false
         settings.centerMode = true
         if (getAdNum === 'two') {
             settings.slidesToShow = 2
         }
         return (
             <Slider {...settings}>
-                <Advertise width={'400px'}
-                           height={'150px'}
+                <Advertise width={'100%'}
+                           height={'40%'}
                            imgSize={'95%'}
                            urlImg={"https://nstore-phinf.pstatic.net/20210914_293/nstore_adm_1631619930201MrJSw_JPEG/4onPC_344X129.jpg"}
                            urlLink={"https://serieson.naver.com/event/details.nhn?eventNo=13564"}/>
-                <Advertise width={'400px'}
-                           height={'150px'}
+                <Advertise width={'100%'}
+                           height={'40%'}
                            imgSize={'95%'}
                            urlImg={"https://nstore-phinf.pstatic.net/20210914_293/nstore_adm_1631619930201MrJSw_JPEG/4onPC_344X129.jpg"}
                            urlLink={"https://serieson.naver.com/event/details.nhn?eventNo=13564"}/>
-                <Advertise width={'400px'}
-                           height={'150px'}
+                <Advertise width={'100%'}
+                           height={'40%'}
                            imgSize={'95%'}
                            urlImg={"https://nstore-phinf.pstatic.net/20210914_293/nstore_adm_1631619930201MrJSw_JPEG/4onPC_344X129.jpg"}
                            urlLink={"https://serieson.naver.com/event/details.nhn?eventNo=13564"}/>
-                <Advertise width={'400px'}
-                           height={'150px'}
+                <Advertise width={'100%'}
+                           height={'40%'}
                            imgSize={'95%'}
                            urlImg={"https://nstore-phinf.pstatic.net/20210914_293/nstore_adm_1631619930201MrJSw_JPEG/4onPC_344X129.jpg"}
                            urlLink={"https://serieson.naver.com/event/details.nhn?eventNo=13564"}/>
-                <Advertise width={'400px'}
-                           height={'150px'}
+                <Advertise width={'100%'}
+                           height={'40%'}
                            imgSize={'95%'}
                            urlImg={"https://nstore-phinf.pstatic.net/20210914_293/nstore_adm_1631619930201MrJSw_JPEG/4onPC_344X129.jpg"}
                            urlLink={"https://serieson.naver.com/event/details.nhn?eventNo=13564"}/>
