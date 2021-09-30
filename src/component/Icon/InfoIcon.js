@@ -27,3 +27,13 @@ export function Circle({name, size}) {
         </span>
     }
 }
+
+export function Star({bolColor = false, percent = 0}) {
+    if (bolColor) {
+        return <span id={styles['starRed']}
+                     className={`${styles['sp_home_new_v7']} ${styles['star']}`}
+                     style={{width: `${8 * percent}px`}}/>
+    } else {
+        return <span id={styles['starGrey']} className={`${styles['sp_home_new_v7']} ${styles['star']}`}/>
+    }
+}

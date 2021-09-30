@@ -4,22 +4,22 @@ import Grad from "./CardEle/Grad";
 import Price from "./CardEle/Price";
 import Title from "./CardEle/Title";
 
-function MovieCard ({obj, type='info'}){
-    function render(){
-        if(type === 'info'){
+function MovieCard({obj, type = 'info'}) {
+    function render() {
+        if (type === 'info') {
             return <section id={styles['info']} className={`${styles[`movie-card`]}`}>
                 <EventCircle obj={obj} size={40}/>
                 <Title obj={obj}/>
-                <Grad obj={obj} dimension={12} spacing={0.5}/>
+                <Grad obj={obj} size={'small'}/>
                 <Price obj={obj}/>
             </section>;
         }
 
-        if(type === 'slider'){
+        if (type === 'slider') {
             return <section id={styles['slider']} className={`${styles[`movie-card`]}`}>
                 <EventCircle obj={obj} size={50}/>
                 <Title obj={obj} width={50} type={'slider'}/>
-                <Grad obj={obj} dimension={17}/>
+                <Grad obj={obj} size={'big'}/>
                 <Price obj={obj}/>
             </section>;
         }

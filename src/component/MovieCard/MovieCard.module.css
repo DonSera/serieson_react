@@ -2,7 +2,8 @@
     position: relative;
     display: inline-block;
 }
-.movie-card:hover{
+
+.movie-card:hover {
     cursor: pointer;
 }
 

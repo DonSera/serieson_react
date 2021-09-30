@@ -1,18 +1,20 @@
-import StarRatings from "react-star-ratings";
+import styles from './Grad.module.css'
+import {Star} from "../../Icon/InfoIcon";
 
-function Grad({obj, dimension=12, spacing=1}) {
+function Grad({obj, size}) {
     return (
-        <>
-            <StarRatings
-                rating={obj['grad']/ 2}
-                starEmptyColor={'grey'}
-                starRatedColor={'red'}
-                numberOfStars={5}
-                starDimension={`${dimension}px`}
-                starSpacing={`${spacing}px`}
-            />
-            <span>{obj['grad'] % 1 ? obj['grad'] : `${obj['grad']}.0`}</span>
-        </>
+        <div className={styles['grad']}>
+            <section className={styles['star-wrap']}
+                     style={size === 'big' ? {zoom: 1}
+                         : size === 'small' && {zoom: 0.8}}>
+                <Star bolColor={false}/>
+                <Star bolColor={true} percent={obj['grad']}/>
+                <span className={styles['grad-num']}>
+                {obj['grad'] % 1 ? obj['grad'] : `${obj['grad']}.0`}
+                </span>
+
+            </section>
+        </div>
     )
 }
 

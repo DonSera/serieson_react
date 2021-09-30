@@ -1,0 +1,13 @@
+.grad {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.star-wrap {
+    position: relative;
+}
+
+.grad-num {
+    font-weight: bold;
+}
